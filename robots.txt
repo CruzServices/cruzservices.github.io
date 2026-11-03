@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://cruzservices.github.io/sitemap.xml
+Sitemap: https://cruzpropertyservices.com/sitemap.xml
