@@ -1,1375 +1,421 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cruz Janitorial & Environmental Services</title>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Commercial Cleaning in Murfreesboro, Smyrna &amp; Nashville, TN | CRUZ Environmental &amp; Property Services</title>
+<meta name="description" content="Family-owned commercial cleaning, janitorial, floor care and deep cleaning in Murfreesboro, Smyrna and Nashville, TN. Reliable crews, flexible schedules. Request a competitive quote today.">
+<link rel="canonical" href="https://cruzservices.github.io/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#0B1220">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="CRUZ Environmental &amp; Property Services | Commercial Cleaning in Middle Tennessee">
+<meta property="og:description" content="Family-owned janitorial, floor care and deep cleaning for gyms, offices and commercial spaces in Murfreesboro, Smyrna and Nashville.">
+<meta property="og:url" content="https://cruzservices.github.io/">
+<meta property="og:image" content="https://cruzservices.github.io/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "ProfessionalService"],
+  "@id": "https://cruzservices.github.io/#business",
+  "name": "CRUZ Environmental & Property Services",
+  "legalName": "Cruz Janitorial & Environmental Services, LLC",
+  "url": "https://cruzservices.github.io/",
+  "logo": "https://cruzservices.github.io/assets/logo.svg",
+  "image": "https://cruzservices.github.io/assets/og-image.png",
+  "telephone": "+1-615-995-8284",
+  "email": "cruzenvironmental@gmail.com",
+  "description": "Family-owned commercial cleaning, janitorial, floor care and deep cleaning serving Murfreesboro, Smyrna and Nashville, Tennessee.",
+  "priceRange": "$$",
+  "areaServed": [
+    {"@type": "City", "name": "Murfreesboro"},
+    {"@type": "City", "name": "Smyrna"},
+    {"@type": "City", "name": "Nashville"}
+  ],
+  "address": {"@type": "PostalAddress", "addressLocality": "Murfreesboro", "addressRegion": "TN", "addressCountry": "US"},
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Cleaning Services",
+    "itemListElement": [
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Commercial Janitorial Service"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Gym & Fitness Center Cleaning"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Office Cleaning"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Floor Care & Stripping"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Deep Cleaning"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Post-Construction Cleaning"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Disinfection & Sanitization"}}
+    ]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "What areas do you serve?", "acceptedAnswer": {"@type": "Answer", "text": "We serve Murfreesboro, Smyrna and Nashville, Tennessee, plus nearby communities in Rutherford and Davidson counties."}},
+    {"@type": "Question", "name": "Are you insured?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We carry liability insurance and can provide a certificate of insurance on request."}},
+    {"@type": "Question", "name": "How do you price commercial cleaning?", "acceptedAnswer": {"@type": "Answer", "text": "Pricing depends on square footage, visit frequency and the scope of work. We walk your space and send a clear, competitive written quote."}},
+    {"@type": "Question", "name": "Do you offer one-time deep cleans?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Many clients start with a deep clean and then move to a recurring janitorial schedule."}}
+  ]
+}
+</script>
+
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-  :root {
-    --blue: #1A73C8;
-    --blue-dark: #0d5aa7;
-    --blue-light: #e8f2fc;
-    --dark: #1e1e1e;
-    --gray: #5a5a5a;
-    --light: #f7f8fa;
-    --white: #ffffff;
-    --border: #e2e6ea;
-  }
-
-  html { scroll-behavior: smooth; }
-
-  body {
-    font-family: 'Barlow', sans-serif;
-    color: var(--dark);
-    background: var(--white);
-    overflow-x: hidden;
-  }
-
-  /* NAV */
-  nav {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 100;
-    background: rgba(255,255,255,0.97);
-    border-bottom: 1px solid var(--border);
-    padding: 0 5%;
-    height: 64px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .nav-logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    text-decoration: none;
-  }
-
-  .nav-logo svg { width: 36px; height: 36px; }
-
-  .nav-brand {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .nav-brand-name {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 800;
-    font-size: 20px;
-    color: var(--dark);
-    letter-spacing: 0.06em;
-    line-height: 1;
-  }
-
-  .nav-brand-sub {
-    font-size: 9px;
-    color: var(--blue);
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    line-height: 1;
-    margin-top: 2px;
-  }
-
-  .nav-links {
-    display: flex;
-    gap: 32px;
-    align-items: center;
-    list-style: none;
-  }
-
-  .nav-links a {
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--gray);
-    text-decoration: none;
-    letter-spacing: 0.02em;
-    transition: color 0.2s;
-  }
-
-  .nav-links a:hover { color: var(--blue); }
-
-  .nav-cta {
-    background: var(--blue);
-    color: var(--white) !important;
-    padding: 9px 22px;
-    border-radius: 4px;
-    font-weight: 600 !important;
-    transition: background 0.2s !important;
-  }
-
-  .nav-cta:hover { background: var(--blue-dark) !important; color: var(--white) !important; }
-
-  /* HERO */
-  .hero {
-    padding-top: 64px;
-    min-height: 92vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    background: var(--white);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .hero::after {
-    content: '';
-    position: absolute;
-    right: 0; top: 0; bottom: 0;
-    width: 50%;
-    background: var(--blue);
-    z-index: 0;
-  }
-
-  .hero-left {
-    padding: 80px 6% 80px 8%;
-    z-index: 1;
-    animation: fadeUp 0.8s ease both;
-  }
-
-  .hero-eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--blue);
-    margin-bottom: 20px;
-  }
-
-  .hero-eyebrow::before {
-    content: '';
-    display: block;
-    width: 28px;
-    height: 2px;
-    background: var(--blue);
-  }
-
-  h1 {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: clamp(48px, 6vw, 76px);
-    font-weight: 800;
-    line-height: 1.0;
-    letter-spacing: 0.02em;
-    color: var(--dark);
-    text-transform: uppercase;
-    margin-bottom: 24px;
-  }
-
-  h1 span { color: var(--blue); }
-
-  .hero-tagline {
-    font-size: 17px;
-    font-weight: 400;
-    color: var(--gray);
-    line-height: 1.65;
-    max-width: 420px;
-    margin-bottom: 36px;
-  }
-
-  .hero-tagline strong {
-    color: var(--dark);
-    font-weight: 600;
-  }
-
-  .hero-btns {
-    display: flex;
-    gap: 14px;
-    flex-wrap: wrap;
-  }
-
-  .btn-primary {
-    background: var(--blue);
-    color: var(--white);
-    padding: 14px 32px;
-    border-radius: 4px;
-    font-size: 14px;
-    font-weight: 600;
-    text-decoration: none;
-    letter-spacing: 0.04em;
-    transition: background 0.2s, transform 0.15s;
-    display: inline-block;
-  }
-
-  .btn-primary:hover { background: var(--blue-dark); transform: translateY(-1px); }
-
-  .btn-outline {
-    border: 1.5px solid var(--border);
-    color: var(--dark);
-    padding: 14px 32px;
-    border-radius: 4px;
-    font-size: 14px;
-    font-weight: 600;
-    text-decoration: none;
-    letter-spacing: 0.04em;
-    transition: border-color 0.2s, color 0.2s;
-    display: inline-block;
-  }
-
-  .btn-outline:hover { border-color: var(--blue); color: var(--blue); }
-
-  .hero-right {
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 60px 8% 60px 6%;
-    animation: fadeUp 0.8s 0.2s ease both;
-  }
-
-  .hero-logo-wrap {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .hero-logo-wrap svg { width: 180px; height: 180px; }
-
-  .hero-logo-name {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 52px;
-    font-weight: 800;
-    color: var(--white);
-    letter-spacing: 0.08em;
-    line-height: 1;
-  }
-
-  .hero-logo-sub {
-    font-size: 11px;
-    color: rgba(255,255,255,0.7);
-    font-weight: 500;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    text-align: center;
-  }
-
-  .hero-stats {
-    display: flex;
-    gap: 36px;
-    margin-top: 28px;
-  }
-
-  .stat {
-    text-align: center;
-  }
-
-  .stat-num {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 32px;
-    font-weight: 800;
-    color: var(--white);
-    line-height: 1;
-  }
-
-  .stat-label {
-    font-size: 10px;
-    color: rgba(255,255,255,0.65);
-    font-weight: 500;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    margin-top: 4px;
-  }
-
-  /* TRUST BAR */
-  .trust-bar {
-    background: var(--dark);
-    padding: 20px 8%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 48px;
-    flex-wrap: wrap;
-  }
-
-  .trust-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: rgba(255,255,255,0.75);
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 0.03em;
-  }
-
-  .trust-icon {
-    width: 20px;
-    height: 20px;
-    fill: var(--blue);
-    flex-shrink: 0;
-  }
-
-  /* SECTIONS */
-  section { padding: 90px 8%; }
-
-  .section-label {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--blue);
-    margin-bottom: 12px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .section-label::after {
-    content: '';
-    display: block;
-    width: 28px;
-    height: 2px;
-    background: var(--blue);
-  }
-
-  h2 {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: clamp(32px, 4vw, 48px);
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
-    line-height: 1.05;
-    color: var(--dark);
-    margin-bottom: 14px;
-  }
-
-  .section-desc {
-    font-size: 16px;
-    color: var(--gray);
-    line-height: 1.7;
-    max-width: 540px;
-    margin-bottom: 52px;
-  }
-
-  /* SERVICES */
-  .services { background: var(--light); }
-
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 24px;
-  }
-
-  .service-card {
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 32px 28px;
-    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .service-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 3px;
-    background: var(--blue);
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
-    transform-origin: left;
-  }
-
-  .service-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(26,115,200,0.1); border-color: var(--blue); }
-  .service-card:hover::before { transform: scaleX(1); }
-
-  .service-icon {
-    width: 48px;
-    height: 48px;
-    background: var(--blue-light);
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-
-  .service-icon svg { width: 24px; height: 24px; fill: var(--blue); }
-
-  .service-card h3 {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 20px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    color: var(--dark);
-    margin-bottom: 10px;
-  }
-
-  .service-card p {
-    font-size: 14px;
-    color: var(--gray);
-    line-height: 1.65;
-  }
-
-  .service-list {
-    list-style: none;
-    margin-top: 14px;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-  }
-
-  .service-list li {
-    font-size: 13px;
-    color: var(--gray);
-    padding-left: 16px;
-    position: relative;
-  }
-
-  .service-list li::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 7px;
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background: var(--blue);
-    opacity: 0.6;
-  }
-
-  .service-category-label {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: var(--blue);
-    margin-bottom: 18px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .service-category-label::before {
-    content: '';
-    display: block;
-    width: 20px;
-    height: 2px;
-    background: var(--blue);
-    flex-shrink: 0;
-  }
-
-  .service-category-label::after {
-    content: '';
-    display: block;
-    flex: 1;
-    height: 1px;
-    background: var(--border);
-  }
-
-  /* WHY US */
-  .why { background: var(--white); }
-
-  .why-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-    max-width: 860px;
-  }
-
-  .why-item {
-    display: flex;
-    gap: 18px;
-    align-items: flex-start;
-  }
-
-  .why-num {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 42px;
-    font-weight: 800;
-    color: var(--blue-light);
-    line-height: 1;
-    flex-shrink: 0;
-    width: 48px;
-  }
-
-  .why-text h4 {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    color: var(--dark);
-    margin-bottom: 6px;
-  }
-
-  .why-text p { font-size: 14px; color: var(--gray); line-height: 1.6; }
-
-  /* TESTIMONIALS */
-  .testimonials { background: var(--blue); }
-  .testimonials .section-label { color: rgba(255,255,255,0.7); }
-  .testimonials .section-label::after { background: rgba(255,255,255,0.4); }
-  .testimonials h2 { color: var(--white); }
-  .testimonials .section-desc { color: rgba(255,255,255,0.7); }
-
-  .testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 24px;
-  }
-
-  .testimonial-card {
-    background: rgba(255,255,255,0.1);
-    border: 1px solid rgba(255,255,255,0.15);
-    border-radius: 8px;
-    padding: 28px;
-    transition: background 0.2s;
-  }
-
-  .testimonial-card:hover { background: rgba(255,255,255,0.15); }
-
-  .stars {
-    display: flex;
-    gap: 3px;
-    margin-bottom: 16px;
-  }
-
-  .star { width: 14px; height: 14px; fill: #FFD166; }
-
-  .testimonial-text {
-    font-size: 15px;
-    color: rgba(255,255,255,0.9);
-    line-height: 1.7;
-    margin-bottom: 20px;
-    font-style: italic;
-  }
-
-  .testimonial-author {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .author-avatar {
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 700;
-    font-size: 15px;
-    color: var(--white);
-    flex-shrink: 0;
-  }
-
-  .author-name {
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--white);
-  }
-
-  .author-type {
-    font-size: 11px;
-    color: rgba(255,255,255,0.55);
-    margin-top: 2px;
-    letter-spacing: 0.04em;
-  }
-
-  .testimonial-placeholder {
-    background: rgba(255,255,255,0.06);
-    border: 1.5px dashed rgba(255,255,255,0.25);
-    border-radius: 8px;
-    padding: 28px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 10px;
-    min-height: 180px;
-  }
-
-  .testimonial-placeholder p {
-    font-size: 13px;
-    color: rgba(255,255,255,0.45);
-    font-style: italic;
-  }
-
-  /* CONTACT */
-  .contact { background: var(--light); }
-
-  .contact-inner {
-    display: grid;
-    grid-template-columns: 1fr 1.4fr;
-    gap: 60px;
-    align-items: start;
-  }
-
-  .contact-info h3 {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 26px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    margin-bottom: 20px;
-    color: var(--dark);
-  }
-
-  .contact-detail {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    padding: 14px 0;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .contact-detail-icon {
-    width: 40px;
-    height: 40px;
-    background: var(--blue-light);
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-  }
-
-  .contact-detail-icon svg { width: 18px; height: 18px; fill: var(--blue); }
-
-  .contact-detail-label {
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--gray);
-    font-weight: 600;
-    margin-bottom: 2px;
-  }
-
-  .contact-detail-value {
-    font-size: 15px;
-    font-weight: 500;
-    color: var(--dark);
-  }
-
-  .contact-detail-value a { color: var(--blue); text-decoration: none; }
-
-  .contact-form {
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 36px;
-  }
-
-  .contact-form h3 {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 24px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    margin-bottom: 24px;
-    color: var(--dark);
-  }
-
-  .form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-  }
-
-  .form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    margin-bottom: 16px;
-  }
-
-  label {
-    font-size: 12px;
-    font-weight: 600;
-    color: var(--gray);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-  }
-
-  input, select, textarea {
-    padding: 11px 14px;
-    border: 1px solid var(--border);
-    border-radius: 5px;
-    font-size: 14px;
-    font-family: 'Barlow', sans-serif;
-    color: var(--dark);
-    background: var(--white);
-    transition: border-color 0.2s, box-shadow 0.2s;
-    outline: none;
-    width: 100%;
-  }
-
-  input:focus, select:focus, textarea:focus {
-    border-color: var(--blue);
-    box-shadow: 0 0 0 3px rgba(26,115,200,0.1);
-  }
-
-  textarea { resize: vertical; min-height: 110px; }
-
-  .btn-submit {
-    width: 100%;
-    background: var(--blue);
-    color: var(--white);
-    border: none;
-    padding: 14px;
-    border-radius: 5px;
-    font-size: 14px;
-    font-weight: 600;
-    font-family: 'Barlow', sans-serif;
-    letter-spacing: 0.05em;
-    cursor: pointer;
-    transition: background 0.2s;
-    text-transform: uppercase;
-    margin-top: 4px;
-  }
-
-  .btn-submit:hover { background: var(--blue-dark); }
-
-  /* FOOTER */
-  footer {
-    background: var(--dark);
-    padding: 40px 8%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-
-  .footer-logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .footer-logo svg { width: 32px; height: 32px; }
-
-  .footer-brand-name {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 800;
-    font-size: 18px;
-    color: var(--white);
-    letter-spacing: 0.06em;
-  }
-
-  .footer-brand-sub {
-    font-size: 9px;
-    color: rgba(255,255,255,0.45);
-    font-weight: 500;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    margin-top: 2px;
-  }
-
-  .footer-copy {
-    font-size: 12px;
-    color: rgba(255,255,255,0.35);
-  }
-
-  /* ANIMATIONS */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(24px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-
-  .fade-in {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-  }
-
-  .fade-in.animate-ready {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  .fade-in.visible { opacity: 1; transform: translateY(0); }
-
-  /* RESPONSIVE */
-  @media (max-width: 768px) {
-    .hero { grid-template-columns: 1fr; min-height: auto; }
-    .hero::after { display: none; }
-    .hero-left { padding: 60px 6% 40px; }
-    .hero-right { background: var(--blue); padding: 40px 6% 60px; }
-    .hero-logo-wrap svg { width: 120px; height: 120px; }
-    .why-grid { grid-template-columns: 1fr; }
-    .contact-inner { grid-template-columns: 1fr; }
-    .form-row { grid-template-columns: 1fr; }
-    .nav-links { display: none; }
-    footer { flex-direction: column; text-align: center; }
-  }
+:root{
+  --bg:#0B1220; --panel:#111A2E; --line:#1F2A44;
+  --blue:#2F7BFF; --blue-d:#1F5FD6; --silver:#C0C5CB; --white:#F5F7FA;
+  --light:#F3F5F8; --ink:#0B1220; --muted:#5B6578;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-weight:800;line-height:1.1;letter-spacing:-.02em}
+
+/* nav */
+header{position:sticky;top:0;z-index:20;background:rgba(11,18,32,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.mark{font-weight:900;font-size:1.5rem;letter-spacing:.14em;color:var(--silver);text-decoration:none}
+.nav ul{display:flex;gap:28px;list-style:none;align-items:center}
+.nav a.link{color:var(--silver);text-decoration:none;font-size:.92rem;font-weight:600}
+.nav a.link:hover{color:#fff}
+.btn{display:inline-block;background:var(--blue);color:#fff;font-weight:700;padding:13px 26px;border-radius:6px;text-decoration:none;border:2px solid var(--blue);transition:.15s}
+.btn:hover{background:var(--blue-d);border-color:var(--blue-d)}
+.btn.ghost{background:transparent;color:var(--white);border-color:var(--silver)}
+.btn.ghost:hover{background:var(--white);color:var(--ink);border-color:var(--white)}
+.btn.sm{padding:9px 18px;font-size:.88rem}
+
+/* hero */
+.hero{background:radial-gradient(1200px 500px at 80% -10%,#16264a 0%,var(--bg) 60%);color:var(--white);padding:96px 0 88px}
+.hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:56px;align-items:center}
+.eyebrow{color:var(--blue);font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:.78rem;margin-bottom:16px}
+.hero h1{font-size:clamp(2.4rem,5vw,3.8rem);margin-bottom:20px}
+.hero h1 span{color:var(--silver)}
+.hero p.lead{font-size:1.15rem;color:#B9C2D3;max-width:520px;margin-bottom:32px}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.hero .logo{width:100%;height:auto;max-width:420px;margin-left:auto;display:block}
+
+/* proof bar */
+.bar{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.bar .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding-top:26px;padding-bottom:26px}
+.bar div{text-align:center;color:var(--silver);font-size:.9rem;font-weight:600}
+.bar strong{display:block;color:#fff;font-size:1.05rem;margin-bottom:2px}
+
+/* sections */
+section{padding:88px 0}
+.head{max-width:620px;margin-bottom:48px}
+.head .eyebrow{margin-bottom:10px}
+.head h2{font-size:clamp(1.8rem,3.4vw,2.5rem);margin-bottom:12px}
+.head p{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{border:1px solid #E3E7EE;border-radius:10px;padding:28px;background:#fff;transition:.2s}
+.card:hover{border-color:var(--blue);transform:translateY(-3px);box-shadow:0 14px 30px -18px rgba(47,123,255,.5)}
+.card h3{font-size:1.15rem;margin-bottom:8px}
+.card p{color:var(--muted);font-size:.95rem}
+.card .n{color:var(--blue);font-weight:800;font-size:.8rem;letter-spacing:.14em;margin-bottom:14px}
+
+.dark{background:var(--bg);color:var(--white)}
+.dark .head p{color:#B9C2D3}
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.why h3{font-size:1.05rem;margin-bottom:8px;color:#fff}
+.why p{color:#B9C2D3;font-size:.94rem}
+.why .line{width:36px;height:3px;background:var(--blue);margin-bottom:16px}
+
+.area{background:var(--light)}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chips span{background:#fff;border:1px solid #DCE1EA;border-radius:999px;padding:9px 18px;font-weight:600;font-size:.92rem}
+
+.faq details{border-bottom:1px solid #E3E7EE;padding:20px 0}
+.faq summary{font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between}
+.faq summary::after{content:"+";color:var(--blue);font-size:1.4rem;line-height:1}
+.faq details[open] summary::after{content:"–"}
+.faq p{color:var(--muted);margin-top:10px;max-width:720px}
+
+/* contact */
+.contact{background:var(--bg);color:var(--white)}
+.contact .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px}
+.contact h2{font-size:clamp(1.8rem,3.4vw,2.5rem);margin-bottom:14px}
+.contact .info p{color:#B9C2D3;margin-bottom:22px}
+.contact .info a{color:#fff;font-weight:700;text-decoration:none;display:block;font-size:1.2rem;margin-bottom:6px}
+form{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:30px;display:grid;gap:14px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{font-size:.8rem;font-weight:700;color:var(--silver);letter-spacing:.06em;text-transform:uppercase;display:grid;gap:6px}
+input,select,textarea{font:inherit;padding:12px 14px;border-radius:6px;border:1px solid #2A3757;background:#0B1220;color:#fff}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--blue);border-color:transparent}
+textarea{min-height:110px;resize:vertical}
+.hp{position:absolute;left:-9999px}
+
+
+/* work / proof */
+.work{background:var(--light)}
+.reel{position:relative;border-radius:12px;overflow:hidden;background:#0B1220;margin-bottom:16px;aspect-ratio:16/9}
+.reel video{width:100%;height:100%;object-fit:cover;display:block}
+.reel figcaption{position:absolute;left:0;right:0;bottom:0;padding:32px 20px 14px;color:#fff;font-size:.9rem;font-weight:600;background:linear-gradient(transparent,rgba(11,18,32,.85))}
+.shots:empty,.quotes:empty{display:none}
+.shots{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.shots figure{position:relative;border-radius:10px;overflow:hidden;background:#dfe4ec;aspect-ratio:4/3}
+.shots img,.shots video{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+.shots figure:hover img{transform:scale(1.04)}
+.shots figcaption{position:absolute;left:0;right:0;bottom:0;padding:28px 16px 12px;color:#fff;font-size:.86rem;font-weight:600;background:linear-gradient(transparent,rgba(11,18,32,.85))}
+.quotes{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:48px}
+.quote{background:#fff;border:1px solid #E3E7EE;border-left:4px solid var(--blue);border-radius:10px;padding:26px}
+.quote p{font-size:1.02rem;margin-bottom:14px}
+.quote cite{font-style:normal;font-weight:700;font-size:.88rem;color:var(--muted)}
+@media(max-width:860px){.shots{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.shots,.quotes{grid-template-columns:1fr}}
+
+footer{background:#070C17;color:#8E99AE;padding:36px 0;font-size:.86rem}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+footer .mark{font-size:1.1rem}
+
+@media(max-width:860px){
+  .hero .wrap,.contact .wrap{grid-template-columns:1fr}
+  .hero .logo{margin:0;max-width:300px;order:-1}
+  .grid{grid-template-columns:1fr 1fr}
+  .why,.bar .wrap{grid-template-columns:1fr 1fr}
+  .nav ul li:not(:last-child){display:none}
+}
+@media(max-width:560px){
+  .grid,.row{grid-template-columns:1fr}
+  section{padding:64px 0}
+  .hero{padding:56px 0}
+}
 </style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
-  <a href="#" class="nav-logo">
-    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="50" cy="50" r="44" fill="none" stroke="#1A73C8" stroke-width="9"/>
-      <circle cx="50" cy="50" r="30" fill="none" stroke="#1A73C8" stroke-width="7"/>
-      <path d="M68 35 A22 22 0 1 0 68 65" fill="none" stroke="#1A73C8" stroke-width="7" stroke-linecap="round"/>
-      <line x1="50" y1="4" x2="50" y2="19" stroke="white" stroke-width="10"/>
-      <line x1="50" y1="81" x2="50" y2="96" stroke="white" stroke-width="10"/>
-      <line x1="78" y1="65" x2="86" y2="77" stroke="white" stroke-width="10"/>
-    </svg>
-    <div class="nav-brand">
-      <span class="nav-brand-name">CRUZ</span>
-      <span class="nav-brand-sub">Janitorial &amp; Environmental</span>
-    </div>
-  </a>
-  <ul class="nav-links">
-    <li><a href="#services">Services</a></li>
-    <li><a href="#why">Why Us</a></li>
-    <li><a href="#testimonials">Reviews</a></li>
-    <li><a href="#contact" class="nav-cta">Get a Quote</a></li>
-  </ul>
-</nav>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-left">
-    <div class="hero-eyebrow">Nashville, TN &amp; Surrounding Areas</div>
-    <h1>Locally Owned.<br><span>Quality</span> You<br>Can Trust.</h1>
-    <p class="hero-tagline">Cruz Janitorial &amp; Environmental Services delivers <strong>professional, reliable cleaning</strong> for homes, offices, and commercial spaces — backed by a family name you can count on.</p>
-    <div class="hero-btns">
-      <a href="#contact" class="btn-primary">Get a Free Quote</a>
-      <a href="#services" class="btn-outline">Our Services</a>
-    </div>
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="mark" aria-label="CRUZ Environmental &amp; Property Services">CRUZ</a>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a class="link" href="#services">Services</a></li>
+        <li id="navwork"><a class="link" href="#work">Our Work</a></li>
+        <li><a class="link" href="#why">Why Cruz</a></li>
+        <li><a class="link" href="#areas">Areas</a></li>
+        <li><a class="link" href="#faq">FAQ</a></li>
+        <li><a class="btn sm" href="tel:+16159958284">Call (615) 995-8284</a></li>
+      </ul>
+    </nav>
   </div>
-  <div class="hero-right">
-    <div class="hero-logo-wrap">
-      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="50" cy="50" r="44" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="8"/>
-        <circle cx="50" cy="50" r="30" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="7"/>
-        <path d="M68 35 A22 22 0 1 0 68 65" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="7" stroke-linecap="round"/>
-        <line x1="50" y1="4" x2="50" y2="19" stroke="#1A73C8" stroke-width="10"/>
-        <line x1="50" y1="81" x2="50" y2="96" stroke="#1A73C8" stroke-width="10"/>
-        <line x1="78" y1="65" x2="86" y2="77" stroke="#1A73C8" stroke-width="10"/>
-      </svg>
-      <div class="hero-logo-name">CRUZ</div>
-      <div class="hero-logo-sub">Janitorial &amp; Environmental Services</div>
-      <div class="hero-stats">
-        <div class="stat">
-          <div class="stat-num">100%</div>
-          <div class="stat-label">Satisfaction</div>
-        </div>
-        <div class="stat">
-          <div class="stat-num">Local</div>
-          <div class="stat-label">Family Owned</div>
-        </div>
-        <div class="stat">
-          <div class="stat-num">18+</div>
-          <div class="stat-label">Services</div>
-        </div>
+</header>
+
+<main id="top">
+
+<section class="hero" style="padding-bottom:88px">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Murfreesboro · Smyrna · Nashville</p>
+      <h1>Clean spaces. <span>Handled right.</span></h1>
+      <p class="lead">Family-owned commercial cleaning and property services for gyms, offices and businesses across Middle Tennessee. Show up on time, do it properly, every visit.</p>
+      <div class="cta">
+        <a class="btn" href="#contact">Get a Competitive Quote</a>
+        <a class="btn ghost" href="#services">See Services</a>
       </div>
     </div>
+    <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 894.8 436.2" role="img" aria-label="CRUZ Environmental &amp; Property Services logo"><path transform="translate(30,215)" d="M107.734375 2.44140625C167.48046875 2.44140625 197.6953125 -35.400390625 200.4296875 -66.40625H144.375C141.640625 -50.9033203125 129.3359375 -40.52734375 109.1015625 -40.52734375C82.03125 -40.52734375 66.4453125 -57.4951171875 66.4453125 -90.8203125C66.4453125 -122.55859375 81.62109375 -141.357421875 109.375 -141.357421875C129.8828125 -141.357421875 141.9140625 -130.9814453125 144.1015625 -115.478515625H200.15625C195.09765625 -159.423828125 158.45703125 -184.326171875 107.734375 -184.326171875C52.91015625 -184.326171875 9.5703125 -151.611328125 9.5703125 -90.8203125C9.5703125 -30.3955078125 51.81640625 2.44140625 107.734375 2.44140625ZM236.44140625000003 0.0H291.67578125V-60.05859375H310.81640625L346.63671875 0.0H406.79296875L365.23046875 -67.87109375C386.96875 -77.1484375 399.95703125 -94.8486328125 399.95703125 -120.1171875C399.95703125 -158.69140625 369.60546875 -181.884765625 324.21484375 -181.884765625H236.44140625000003ZM291.67578125 -98.388671875V-142.333984375H311.08984375C330.640625 -142.333984375 342.26171875 -135.6201171875 342.26171875 -120.1171875C342.26171875 -104.4921875 330.640625 -98.388671875 311.08984375 -98.388671875ZM525.24609375 2.197265625C577.609375 2.197265625 613.29296875 -23.8037109375 613.29296875 -65.4296875V-181.884765625H558.05859375V-69.580078125C558.05859375 -52.6123046875 544.38671875 -40.52734375 525.24609375 -40.52734375C506.37890625000006 -40.52734375 492.70703125000006 -52.6123046875 492.70703125000006 -69.580078125V-181.884765625H437.47265625000006V-65.4296875C437.47265625000006 -23.8037109375 472.60937500000006 2.197265625 525.24609375 2.197265625ZM654.3632812500001 0.0H820.6132812500001V-39.794921875H762.9179687500001C749.1093750000001 -39.794921875 735.1640625000001 -39.794921875 721.3554687500001 -39.1845703125C730.6523437500001 -48.33984375 739.4023437500001 -57.373046875 747.0585937500001 -66.40625L820.8867187500001 -154.541015625V-181.884765625H654.6367187500001V-142.08984375H716.9804687500001C729.2851562500001 -142.08984375 741.4531250000001 -142.08984375 753.7578125000001 -142.578125C745.1445312500001 -134.1552734375 736.9414062500001 -125.732421875 729.8320312500001 -117.3095703125L654.3632812500001 -27.34375Z" fill="#C0C5CB"/><rect x="30" y="267" width="834.8" height="9" fill="#C0C5CB"/><path transform="translate(126.0,347.4)" d="M3.0322265625 0.0H25.470703125V-5.6826171875H9.8828125V-14.10546875H24.2578125V-19.6982421875H9.8828125V-27.7841796875H25.42578125V-33.466796875H3.0322265625ZM44.7736328125 0.0H51.7814453125V-15.3857421875C51.7814453125 -17.3623046875 51.579296875 -20.9560546875 51.3322265625 -24.9990234375C53.3986328125 -20.8212890625 54.633984375 -18.373046875 56.4982421875 -15.36328125L66.1115234375 0.0H73.770703125V-33.466796875H66.762890625V-17.4072265625C66.762890625 -15.2060546875 66.942578125 -11.6123046875 67.1896484375 -8.3330078125C65.7296875 -11.814453125 64.3146484375 -14.3525390625 62.989453125 -16.53125L52.4103515625 -33.466796875H44.7736328125ZM103.428125 0.0H112.3900390625L123.8451171875 -33.466796875H116.27578125L111.109765625 -17.3173828125C110.0990234375 -13.9482421875 109.0658203125 -10.0849609375 107.9427734375 -5.525390625C106.797265625 -10.0400390625 105.719140625 -13.9482421875 104.6634765625 -17.3173828125L99.3177734375 -33.466796875H91.703515625ZM148.62851562499998 -33.466796875H141.77792968749998V0.0H148.62851562499998ZM168.49296875 0.0H175.3435546875V-11.94921875H180.7341796875L187.1130859375 0.0H194.7048828125L187.584765625 -13.0498046875C191.403125 -14.689453125 193.514453125 -17.9912109375 193.514453125 -22.5732421875C193.514453125 -29.154296875 189.15703125 -33.466796875 181.5427734375 -33.466796875H168.49296875ZM175.3435546875 -17.4970703125V-27.806640625H180.2625C184.4626953125 -27.806640625 186.4392578125 -25.9423828125 186.4392578125 -22.5732421875C186.4392578125 -19.2265625 184.4626953125 -17.4970703125 180.2849609375 -17.4970703125ZM227.1923828125 0.44921875C236.064453125 0.44921875 242.802734375 -5.8173828125 242.802734375 -16.7109375C242.802734375 -27.6494140625 236.064453125 -33.916015625 227.1923828125 -33.916015625C218.3203125 -33.916015625 211.58203125 -27.6494140625 211.58203125 -16.7109375C211.58203125 -5.83984375 218.3203125 0.44921875 227.1923828125 0.44921875ZM227.1923828125 -5.6376953125C222.00390625 -5.6376953125 218.544921875 -9.5458984375 218.544921875 -16.7109375C218.544921875 -23.8984375 222.00390625 -27.8291015625 227.1923828125 -27.8291015625C232.380859375 -27.8291015625 235.83984375 -23.9208984375 235.83984375 -16.7109375C235.83984375 -9.5458984375 232.380859375 -5.6376953125 227.1923828125 -5.6376953125ZM261.7462890625 0.0H268.7541015625V-15.3857421875C268.7541015625 -17.3623046875 268.551953125 -20.9560546875 268.3048828125 -24.9990234375C270.3712890625 -20.8212890625 271.606640625 -18.373046875 273.4708984375 -15.36328125L283.0841796875 0.0H290.743359375V-33.466796875H283.735546875V-17.4072265625C283.735546875 -15.2060546875 283.915234375 -11.6123046875 284.1623046875 -8.3330078125C282.70234375 -11.814453125 281.2873046875 -14.3525390625 279.962109375 -16.53125L269.3830078125 -33.466796875H261.7462890625ZM310.6078125 0.0H317.4134765625V-15.7900390625C317.4134765625 -18.3056640625 317.2337890625 -23.224609375 317.16640625 -27.2900390625C318.3568359375 -22.7978515625 319.7044921875 -18.103515625 320.490625 -15.7900390625L326.1283203125 0.0H331.90078125L337.4486328125 -15.7900390625C338.234765625 -18.1708984375 339.6498046875 -23.044921875 340.7728515625 -27.5595703125C340.70546875 -23.3369140625 340.52578125 -18.3056640625 340.52578125 -15.7900390625V0.0H347.4212890625V-33.466796875H336.8646484375L331.5189453125 -18.103515625C330.8451171875 -15.9697265625 329.8119140625 -11.5 329.0482421875 -7.8837890625C328.262109375 -11.5224609375 327.22890625 -15.9921875 326.555078125 -18.103515625L321.11953125 -33.466796875H310.6078125ZM367.26328125000003 0.0H389.70175781250003V-5.6826171875H374.11386718750003V-14.10546875H388.48886718750003V-19.6982421875H374.11386718750003V-27.7841796875H389.65683593750003V-33.466796875H367.26328125000003ZM409.00468750000005 0.0H416.01250000000005V-15.3857421875C416.01250000000005 -17.3623046875 415.81035156250005 -20.9560546875 415.56328125000005 -24.9990234375C417.62968750000005 -20.8212890625 418.86503906250005 -18.373046875 420.72929687500005 -15.36328125L430.34257812500005 0.0H438.00175781250005V-33.466796875H430.99394531250005V-17.4072265625C430.99394531250005 -15.2060546875 431.17363281250005 -11.6123046875 431.42070312500005 -8.3330078125C429.96074218750005 -11.814453125 428.54570312500005 -14.3525390625 427.22050781250005 -16.53125L416.64140625000005 -33.466796875H409.00468750000005ZM456.51855468750006 -27.7841796875H466.76074218750006V0.0H473.63378906250006V-27.7841796875H483.85351562500006V-33.466796875H456.51855468750006ZM500.43867187500007 0.0H508.00800781250007L510.50117187500007 -7.771484375H522.3830078125001L524.9660156250001 0.0H532.5802734375001L520.8556640625001 -33.466796875H511.87128906250007ZM512.2082031250001 -13.1396484375 513.1740234375001 -16.1494140625C514.1847656250001 -19.5185546875 515.1730468750001 -23.494140625 516.2960937500001 -28.0986328125C517.4640625000001 -23.5390625 518.5197265625001 -19.5859375 519.5978515625001 -16.1494140625L520.6085937500001 -13.1396484375ZM550.5130859375 0.0H571.8060546875V-5.6826171875H557.363671875V-33.466796875H550.5130859375ZM624.9890624999999 0.494140625C627.8865234374999 0.494140625 631.1208984374999 -0.3818359375 633.5466796874999 -2.2685546875L635.5906249999999 0.0H642.6882812499999L637.6794921874999 -5.7724609375C639.4988281249999 -8.17578125 640.6892578124999 -11.6572265625 640.6892578124999 -16.216796875H635.0515624999999C635.0515624999999 -14.0380859375 634.5124999999999 -12.0615234375 633.6365234374999 -10.421875L627.9988281249999 -16.9130859375L629.9978515624999 -18.3505859375C632.7380859374999 -20.349609375 634.4451171874999 -22.8876953125 634.4451171874999 -25.9873046875C634.4451171874999 -30.322265625 631.1433593749999 -33.87109375 625.7976562499999 -33.87109375C620.3396484374999 -33.87109375 616.7458984374999 -30.1875 616.7458984374999 -25.4033203125C616.7458984374999 -22.37109375 618.1609374999999 -19.9228515625 619.9578124999999 -17.654296875C616.2742187499999 -15.138671875 613.8035156249999 -12.802734375 613.8035156249999 -8.8271484375C613.8035156249999 -3.638671875 618.0486328124999 0.494140625 624.9890624999999 0.494140625ZM629.9080078124999 -6.3564453125C628.4480468749999 -5.435546875 626.8083984374999 -4.94140625 625.1912109374999 -4.94140625C622.3162109374999 -4.94140625 620.3845703124999 -6.55859375 620.3845703124999 -9.0966796875C620.3845703124999 -10.87109375 621.3279296874999 -12.083984375 623.1697265624999 -13.431640625L623.4392578124999 -13.611328125ZM624.6970703124999 -20.7763671875C623.3718749999999 -22.4384765625 622.5632812499999 -23.8310546875 622.5632812499999 -25.3359375C622.5632812499999 -27.2001953125 623.8435546874999 -28.435546875 625.8425781249999 -28.435546875C627.8416015624999 -28.435546875 628.9646484374999 -27.22265625 628.9646484374999 -25.6728515625C628.9646484374999 -24.1455078125 627.8865234374999 -22.91015625 626.4939453124999 -21.9892578125Z" fill="#C0C5CB"/><path transform="translate(93.9,406.2)" d="M3.0322265625 0.0H9.8828125V-10.9384765625H15.9248046875C23.62890625 -10.9384765625 28.0537109375 -15.54296875 28.0537109375 -22.1689453125C28.0537109375 -28.75 23.6962890625 -33.466796875 16.08203125 -33.466796875H3.0322265625ZM9.8828125 -16.4638671875V-27.806640625H14.8017578125C19.001953125 -27.806640625 20.978515625 -25.5380859375 20.978515625 -22.1689453125C20.978515625 -18.7998046875 19.001953125 -16.4638671875 14.82421875 -16.4638671875ZM46.637890625 0.0H53.4884765625V-11.94921875H58.8791015625L65.2580078125 0.0H72.8498046875L65.7296875 -13.0498046875C69.548046875 -14.689453125 71.659375 -17.9912109375 71.659375 -22.5732421875C71.659375 -29.154296875 67.301953125 -33.466796875 59.6876953125 -33.466796875H46.637890625ZM53.4884765625 -17.4970703125V-27.806640625H58.407421875C62.6076171875 -27.806640625 64.5841796875 -25.9423828125 64.5841796875 -22.5732421875C64.5841796875 -19.2265625 62.6076171875 -17.4970703125 58.4298828125 -17.4970703125ZM105.3373046875 0.44921875C114.209375 0.44921875 120.94765625 -5.8173828125 120.94765625 -16.7109375C120.94765625 -27.6494140625 114.209375 -33.916015625 105.3373046875 -33.916015625C96.465234375 -33.916015625 89.726953125 -27.6494140625 89.726953125 -16.7109375C89.726953125 -5.83984375 96.465234375 0.44921875 105.3373046875 0.44921875ZM105.3373046875 -5.6376953125C100.148828125 -5.6376953125 96.68984375 -9.5458984375 96.68984375 -16.7109375C96.68984375 -23.8984375 100.148828125 -27.8291015625 105.3373046875 -27.8291015625C110.52578125 -27.8291015625 113.984765625 -23.9208984375 113.984765625 -16.7109375C113.984765625 -9.5458984375 110.52578125 -5.6376953125 105.3373046875 -5.6376953125ZM139.89121093749998 0.0H146.74179687499998V-10.9384765625H152.78378906249998C160.48789062499998 -10.9384765625 164.91269531249998 -15.54296875 164.91269531249998 -22.1689453125C164.91269531249998 -28.75 160.55527343749998 -33.466796875 152.94101562499998 -33.466796875H139.89121093749998ZM146.74179687499998 -16.4638671875V-27.806640625H151.66074218749998C155.86093749999998 -27.806640625 157.83749999999998 -25.5380859375 157.83749999999998 -22.1689453125C157.83749999999998 -18.7998046875 155.86093749999998 -16.4638671875 151.68320312499998 -16.4638671875ZM183.496875 0.0H205.9353515625V-5.6826171875H190.3474609375V-14.10546875H204.7224609375V-19.6982421875H190.3474609375V-27.7841796875H205.8904296875V-33.466796875H183.496875ZM225.23828125 0.0H232.0888671875V-11.94921875H237.4794921875L243.8583984375 0.0H251.4501953125L244.330078125 -13.0498046875C248.1484375 -14.689453125 250.259765625 -17.9912109375 250.259765625 -22.5732421875C250.259765625 -29.154296875 245.90234375 -33.466796875 238.2880859375 -33.466796875H225.23828125ZM232.0888671875 -17.4970703125V-27.806640625H237.0078125C241.2080078125 -27.806640625 243.1845703125 -25.9423828125 243.1845703125 -22.5732421875C243.1845703125 -19.2265625 241.2080078125 -17.4970703125 237.0302734375 -17.4970703125ZM267.9005859375 -27.7841796875H278.1427734375V0.0H285.0158203125V-27.7841796875H295.235546875V-33.466796875H267.9005859375ZM324.219140625 0.0H331.047265625V-12.578125L343.2435546875 -33.466796875H335.2474609375L329.7669921875 -23.044921875C328.980859375 -21.5400390625 328.3294921875 -20.1474609375 327.678125 -18.373046875C327.004296875 -20.125 326.3529296875 -21.517578125 325.4994140625 -23.044921875L319.8392578125 -33.466796875H311.820703125L324.219140625 -12.578125ZM398.13359375000005 0.494140625C406.26445312500005 0.494140625 411.04863281250005 -3.4365234375 411.04863281250005 -9.5234375C411.04863281250005 -15.138671875 406.69121093750005 -18.013671875 401.05351562500005 -19.31640625L398.02128906250005 -20.0576171875C395.19121093750005 -20.7314453125 392.67558593750005 -21.787109375 392.67558593750005 -24.2802734375C392.67558593750005 -26.5263671875 394.65214843750005 -28.1435546875 398.15605468750005 -28.1435546875C401.59257812500005 -28.1435546875 403.72636718750005 -26.59375 403.97343750000005 -23.9208984375H410.59941406250005C410.48710937500005 -29.8056640625 405.63554687500005 -33.916015625 398.22343750000005 -33.916015625C390.94609375000005 -33.916015625 385.64531250000005 -29.873046875 385.64531250000005 -23.8310546875C385.64531250000005 -18.95703125 389.03691406250005 -16.1044921875 394.69707031250005 -14.734375L398.38066406250005 -13.8134765625C402.01933593750005 -12.9150390625 404.15312500000005 -11.859375 404.15312500000005 -9.568359375C404.15312500000005 -7.0302734375 401.72734375000005 -5.30078125 398.06621093750005 -5.30078125C394.36015625000005 -5.30078125 391.64238281250005 -6.9853515625 391.41777343750005 -10.376953125H384.74687500000005C384.94902343750005 -3.2568359375 390.09257812500005 0.494140625 398.13359375000005 0.494140625ZM429.79003906250006 0.0H452.22851562500006V-5.6826171875H436.64062500000006V-14.10546875H451.01562500000006V-19.6982421875H436.64062500000006V-27.7841796875H452.18359375000006V-33.466796875H429.79003906250006ZM471.53144531250007 0.0H478.38203125000007V-11.94921875H483.77265625000007L490.15156250000007 0.0H497.74335937500007L490.62324218750007 -13.0498046875C494.44160156250007 -14.689453125 496.55292968750007 -17.9912109375 496.55292968750007 -22.5732421875C496.55292968750007 -29.154296875 492.19550781250007 -33.466796875 484.58125000000007 -33.466796875H471.53144531250007ZM478.38203125000007 -17.4970703125V-27.806640625H483.30097656250007C487.50117187500007 -27.806640625 489.47773437500007 -25.9423828125 489.47773437500007 -22.5732421875C489.47773437500007 -19.2265625 487.50117187500007 -17.4970703125 483.32343750000007 -17.4970703125ZM525.334375 0.0H534.2962890625L545.7513671875 -33.466796875H538.18203125L533.016015625 -17.3173828125C532.0052734375 -13.9482421875 530.9720703125 -10.0849609375 529.8490234375 -5.525390625C528.703515625 -10.0400390625 527.625390625 -13.9482421875 526.5697265625 -17.3173828125L521.2240234375 -33.466796875H513.609765625ZM570.534765625 -33.466796875H563.6841796875V0.0H570.534765625ZM605.0212890624999 0.44921875C613.4666015624999 0.44921875 618.6775390624999 -5.2333984375 619.4412109374999 -11.455078125H612.5007812499999C611.8269531249999 -7.81640625 608.9519531249999 -5.6376953125 605.1335937499999 -5.6376953125C599.9675781249999 -5.6376953125 596.4412109374999 -9.4560546875 596.4412109374999 -16.7109375C596.4412109374999 -23.80859375 599.9226562499999 -27.8291015625 605.1560546874999 -27.8291015625C608.9744140624999 -27.8291015625 611.8494140624999 -25.6728515625 612.4783203124999 -22.0341796875H619.4187499999999C618.4304687499999 -29.55859375 612.6355468749999 -33.916015625 605.0212890624999 -33.916015625C596.1941406249999 -33.916015625 589.4783203124999 -27.6494140625 589.4783203124999 -16.7109375C589.4783203124999 -5.83984375 596.1042968749999 0.44921875 605.0212890624999 0.44921875ZM638.2275390624999 0.0H660.6660156249999V-5.6826171875H645.0781249999999V-14.10546875H659.4531249999999V-19.6982421875H645.0781249999999V-27.7841796875H660.6210937499999V-33.466796875H638.2275390624999ZM692.2326171874998 0.494140625C700.3634765624998 0.494140625 705.1476562499998 -3.4365234375 705.1476562499998 -9.5234375C705.1476562499998 -15.138671875 700.7902343749998 -18.013671875 695.1525390624998 -19.31640625L692.1203124999998 -20.0576171875C689.2902343749998 -20.7314453125 686.7746093749998 -21.787109375 686.7746093749998 -24.2802734375C686.7746093749998 -26.5263671875 688.7511718749998 -28.1435546875 692.2550781249998 -28.1435546875C695.6916015624998 -28.1435546875 697.8253906249998 -26.59375 698.0724609374998 -23.9208984375H704.6984374999998C704.5861328124998 -29.8056640625 699.7345703124998 -33.916015625 692.3224609374998 -33.916015625C685.0451171874998 -33.916015625 679.7443359374998 -29.873046875 679.7443359374998 -23.8310546875C679.7443359374998 -18.95703125 683.1359374999998 -16.1044921875 688.7960937499998 -14.734375L692.4796874999998 -13.8134765625C696.1183593749998 -12.9150390625 698.2521484374998 -11.859375 698.2521484374998 -9.568359375C698.2521484374998 -7.0302734375 695.8263671874998 -5.30078125 692.1652343749998 -5.30078125C688.4591796874998 -5.30078125 685.7414062499998 -6.9853515625 685.5167968749998 -10.376953125H678.8458984374998C679.0480468749998 -3.2568359375 684.1916015624998 0.494140625 692.2326171874998 0.494140625Z" fill="#C0C5CB"/></svg>
   </div>
 </section>
 
-<!-- TRUST BAR -->
-<div class="trust-bar">
-  <div class="trust-item">
-    <svg class="trust-icon" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
-    Fully Insured
-  </div>
-  <div class="trust-item">
-    <svg class="trust-icon" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
-    Locally Owned &amp; Operated
-  </div>
-  <div class="trust-item">
-    <svg class="trust-icon" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-    Satisfaction Guaranteed
-  </div>
-  <div class="trust-item">
-    <svg class="trust-icon" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm4.24 16L12 15.45 7.77 18l1.12-4.81-3.73-3.23 4.92-.42L12 5l1.92 4.53 4.92.42-3.73 3.23L16.23 18z"/></svg>
-    Trusted &amp; Reliable
+<div class="bar">
+  <div class="wrap">
+    <div><strong>Family Owned</strong>Local &amp; accountable</div>
+    <div><strong>Insured</strong>COI on request</div>
+    <div><strong>Flexible Schedules</strong>Day, evening, overnight</div>
+    <div><strong>Competitive Quotes</strong>Written &amp; clear</div>
   </div>
 </div>
 
-<!-- SERVICES -->
-<section class="services" id="services">
-  <div class="section-label">What We Do</div>
-  <h2>Our Services</h2>
-  <p class="section-desc">From homes and offices to specialized facilities — Cruz handles it all with professionalism you can count on.</p>
-
-  <!-- Category: Residential & Short-Term -->
-  <div class="service-category-label fade-in">Residential &amp; Short-Term Rentals</div>
-  <div class="services-grid fade-in" style="margin-bottom: 40px;">
-    <div class="service-card">
-      <div class="service-icon">
-        <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
-      </div>
-      <h3>Residential Cleaning</h3>
-      <p>Thorough home cleaning tailored to your schedule — from routine maintenance to deep cleans that reach every corner.</p>
-      <ul class="service-list">
-        <li>Kitchen, bathrooms &amp; living areas</li>
-        <li>Recurring or one-time service</li>
-        <li>Customizable cleaning plans</li>
-      </ul>
+<section id="services">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">What we do</p>
+      <h2>Commercial cleaning and property services</h2>
+      <p>From recurring janitorial to one-time deep cleans, one local team that treats your building like its own.</p>
     </div>
-    <div class="service-card">
-      <div class="service-icon">
-        <svg viewBox="0 0 24 24"><path d="M7 13c1.66 0 3-1.34 3-3S8.66 7 7 7s-3 1.34-3 3 1.34 3 3 3zm12-6h-8v7H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4z"/></svg>
-      </div>
-      <h3>Airbnb &amp; STR Cleaning</h3>
-      <p>Fast, reliable turnovers for short-term rental properties. We make sure every guest walks into a spotless space.</p>
-      <ul class="service-list">
-        <li>Same-day turnover available</li>
-        <li>Linen change &amp; restocking</li>
-        <li>Inspection-ready results</li>
-      </ul>
+    <div class="grid">
+      <article class="card"><p class="n">01</p><h3>Commercial Janitorial</h3><p>Recurring daily or weekly cleaning for offices, retail and professional spaces on a schedule that fits you.</p></article>
+      <article class="card"><p class="n">02</p><h3>Gym &amp; Fitness Centers</h3><p>Locker rooms, equipment, floors and high-touch surfaces cleaned to keep members coming back.</p></article>
+      <article class="card"><p class="n">03</p><h3>Deep Cleaning</h3><p>Top-to-bottom resets for new accounts, seasonal refreshes or spaces that need to catch up.</p></article>
+      <article class="card"><p class="n">04</p><h3>Floor Care &amp; Stripping</h3><p>Strip, wax, scrub and buff to restore hard floors and extend their life.</p></article>
+      <article class="card"><p class="n">05</p><h3>Disinfection &amp; Sanitizing</h3><p>Targeted sanitizing of restrooms, break rooms and shared surfaces.</p></article>
+      <article class="card"><p class="n">06</p><h3>Post-Construction Cleaning</h3><p>Dust, debris and residue removed so renovated spaces are ready for move-in.</p></article>
+      <article class="card"><p class="n">07</p><h3>Carpet Cleaning</h3><p>Fresh, residue-free carpets for offices and commercial spaces.</p></article>
+      <article class="card"><p class="n">08</p><h3>Window &amp; Pressure Washing</h3><p>Clear glass and clean exteriors that make a strong first impression.</p></article>
+      <article class="card"><p class="n">09</p><h3>Residential &amp; Turnover</h3><p>Home deep cleans, move-in/move-out and short-term rental turnovers.</p></article>
     </div>
-    <div class="service-card">
-      <div class="service-icon">
-        <svg viewBox="0 0 24 24"><path d="M20 8h-2.81c-.45-.78-1.07-1.45-1.82-1.96L17 4.41 15.59 3l-2.17 2.17C13 5.06 12.51 5 12 5s-1 .06-1.42.17L8.41 3 7 4.41l1.62 1.63C7.88 6.55 7.26 7.22 6.81 8H4v2h2.09c-.05.33-.09.66-.09 1v1H4v2h2v1c0 .34.04.67.09 1H4v2h2.81c1.04 1.79 2.97 3 5.19 3s4.15-1.21 5.19-3H20v-2h-2.09c.05-.33.09-.66.09-1v-1h2v-2h-2v-1c0-.34-.04-.67-.09-1H20V8zm-4 4v3c0 2.21-1.79 4-4 4s-4-1.79-4-4v-3c0-2.21 1.79-4 4-4s4 1.79 4 4z"/></svg>
-      </div>
-      <h3>Apartment Turnover Cleaning</h3>
-      <p>Move-in/move-out cleaning for apartments and rental units — fully refreshed and ready for the next tenant.</p>
-      <ul class="service-list">
-        <li>Full unit deep clean</li>
-        <li>Appliances &amp; cabinets included</li>
-        <li>Landlord &amp; property manager ready</li>
-      </ul>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">
-        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.11 0-2 .89-2 2v12c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S14.93 14 13 14c-1.94 0-3.5-1.57-3.5-3.5S11.06 7 13 7zM6 18c0-2 4-3.1 7-3.1s7 1.1 7 3.1v1H6v-1z"/></svg>
-      </div>
-      <h3>Deep Cleaning Services</h3>
-      <p>A thorough top-to-bottom clean for homes and spaces that need extra attention — perfect for seasonal resets.</p>
-      <ul class="service-list">
-        <li>Behind appliances &amp; fixtures</li>
-        <li>Baseboards, vents &amp; blinds</li>
-        <li>Inside cabinets &amp; drawers</li>
-      </ul>
-    </div>
+    <!-- EXPANSION (enable only once licensed AND covered by your insurance policy):
+         crawl space cleanup, air-duct cleaning, mobile home set-up & prep, mold & water damage. -->
   </div>
+</section>
 
-  <!-- Category: Commercial & Specialty -->
-  <div class="service-category-label fade-in">Commercial &amp; Specialty Facilities</div>
-  <div class="services-grid fade-in" style="margin-bottom: 40px;">
-    <div class="service-card">
-      <div class="service-icon">
-        <svg viewBox="0 0 24 24"><path d="M12 3L2 12h3v8h6v-5h2v5h6v-8h3L12 3z"/></svg>
-      </div>
-      <h3>Office Cleaning</h3>
-      <p>Professional, scheduled cleaning for offices and workplaces that keeps your team productive and your space polished.</p>
-      <ul class="service-list">
-        <li>Daily, weekly &amp; monthly plans</li>
-        <li>Restrooms &amp; breakrooms</li>
-        <li>Desks, surfaces &amp; common areas</li>
-      </ul>
+<section id="work" class="work">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Our work</p>
+      <h2>See the difference.</h2>
+      <p>Real spaces we clean across Middle Tennessee.</p>
     </div>
-    <div class="service-card">
-      <div class="service-icon">
-        <svg viewBox="0 0 24 24"><path d="M18 6h-2c0-2.21-1.79-4-4-4S8 3.79 8 6H6c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-8 4c0 .55-.45 1-1 1s-1-.45-1-1V8h2v2zm2-4c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm4 4c0 .55-.45 1-1 1s-1-.45-1-1V8h2v2z"/></svg>
-      </div>
-      <h3>Retail Store Cleaning</h3>
-      <p>Clean, welcoming retail environments that make great first impressions on every customer who walks through the door.</p>
-      <ul class="service-list">
-        <li>Before/after hours service</li>
-        <li>Display areas &amp; fitting rooms</li>
-        <li>Entrances &amp; high-traffic zones</li>
-      </ul>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">
-        <svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.85 7h10.29l1.08 3.11H5.77L6.85 7zM19 17H5v-5h14v5z"/></svg>
-      </div>
-      <h3>Restaurant Cleaning</h3>
-      <p>Health-code compliant cleaning for restaurants and food service facilities — front of house and back of house.</p>
-      <ul class="service-list">
-        <li>Kitchen degreasing &amp; sanitation</li>
-        <li>Dining area &amp; restroom service</li>
-        <li>Health inspection ready</li>
-      </ul>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">
-        <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"/></svg>
-      </div>
-      <h3>Hotel &amp; Hospitality Cleaning</h3>
-      <p>Consistent, high-standard cleaning for hotels, motels, and hospitality venues that keeps guests coming back.</p>
-      <ul class="service-list">
-        <li>Guest room turnovers</li>
-        <li>Lobby &amp; common areas</li>
-        <li>Flexible scheduling around guests</li>
-      </ul>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">
-        <svg viewBox="0 0 24 24"><path d="M20.57 14.86L22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29l-1.43-1.43z"/></svg>
-      </div>
-      <h3>Gym &amp; Fitness Center Cleaning</h3>
-      <p>Sanitized, odor-free fitness spaces that members trust. We disinfect equipment, mats, and high-touch surfaces thoroughly.</p>
-      <ul class="service-list">
-        <li>Equipment &amp; mat disinfection</li>
-        <li>Locker rooms &amp; showers</li>
-        <li>Early morning availability</li>
-      </ul>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">
-        <svg viewBox="0 0 24 24"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9zm0 16c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7zm1-11h-2v3H8v2h3v3h2v-3h3v-2h-3V8z"/></svg>
-      </div>
-      <h3>Daycare Cleaning</h3>
-      <p>Safe, child-friendly cleaning for daycare and childcare facilities using non-toxic, EPA-approved products.</p>
-      <ul class="service-list">
-        <li>Toy &amp; surface sanitization</li>
-        <li>Restroom &amp; diaper area cleaning</li>
-        <li>Non-toxic, child-safe products</li>
-      </ul>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">
-        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
-      </div>
-      <h3>Event Venue Cleaning</h3>
-      <p>Pre- and post-event cleaning for venues of all sizes — we get the space ready before and restore it after.</p>
-      <ul class="service-list">
-        <li>Setup &amp; breakdown cleanup</li>
-        <li>Restroom servicing during events</li>
-        <li>Same-day turnaround available</li>
-      </ul>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">
-        <svg viewBox="0 0 24 24"><path d="M4 10h3v7H4zm6.5-6h3v13h-3zM17 13h3v4h-3z"/></svg>
-      </div>
-      <h3>Warehouse &amp; Industrial Cleaning</h3>
-      <p>Large-scale cleaning for warehouses, manufacturing floors, and industrial facilities with heavy-duty results.</p>
-      <ul class="service-list">
-        <li>Concrete &amp; industrial floor care</li>
-        <li>Loading docks &amp; common areas</li>
-        <li>OSHA-compliant procedures</li>
-      </ul>
-    </div>
+    <figure class="reel">
+      <video muted loop playsinline autoplay preload="metadata" poster="assets/photos/floor-care-poster.jpg" aria-label="Cruz crew machine-scrubbing the floor of a spin studio">
+        <source src="assets/photos/floor-care.mp4" type="video/mp4">
+      </video>
+      <figcaption>Machine floor scrubbing in a fitness studio</figcaption>
+    </figure>
+    <div class="shots" id="shots"></div>
+    <div class="quotes" id="quotes"></div>
   </div>
+</section>
 
-  <!-- Category: Specialized Services -->
-  <div class="service-category-label fade-in">Specialized &amp; Environmental Services</div>
-  <div class="services-grid fade-in">
-    <div class="service-card">
-      <div class="service-icon">
-        <svg viewBox="0 0 24 24"><path d="M3 5v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2H5c-1.11 0-2 .9-2 2zm8 12H7v-4h4v4zm0-6H7V7h4v4zm6 6h-4v-4h4v4zm0-6h-4V7h4v4z"/></svg>
-      </div>
-      <h3>Floor Care &amp; Stripping</h3>
-      <p>Expert stripping, waxing, and buffing to restore and protect all hard floor types to a showroom shine.</p>
-      <ul class="service-list">
-        <li>Strip &amp; wax / re-coat</li>
-        <li>High-speed buffing &amp; polish</li>
-        <li>Tile, VCT &amp; hardwood care</li>
-      </ul>
+<section id="why" class="dark">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Why Cruz</p>
+      <h2>Simple standards. Done every time.</h2>
     </div>
-    <div class="service-card">
-      <div class="service-icon">
-        <svg viewBox="0 0 24 24"><path d="M3 5v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2H5c-1.11 0-2 .9-2 2zm12 4c0 1.66-1.34 3-3 3s-3-1.34-3-3 1.34-3 3-3 3 1.34 3 3zm-9 8c0-2 4-3.1 6-3.1s6 1.1 6 3.1v1H6v-1z"/></svg>
-      </div>
-      <h3>Carpet Cleaning</h3>
-      <p>Deep extraction carpet cleaning that removes stains, allergens, and odors — leaving carpets fresh and renewed.</p>
-      <ul class="service-list">
-        <li>Hot water extraction</li>
-        <li>Stain &amp; odor treatment</li>
-        <li>Residential &amp; commercial</li>
-      </ul>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">
-        <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
-      </div>
-      <h3>Disinfection &amp; Sanitization</h3>
-      <p>Hospital-grade disinfection services that eliminate bacteria, viruses, and pathogens from any environment.</p>
-      <ul class="service-list">
-        <li>EPA-registered disinfectants</li>
-        <li>Electrostatic spray application</li>
-        <li>Schools, offices &amp; medical spaces</li>
-      </ul>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">
-        <svg viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 008 20c11 0 11-8 11-8s-3.19.09-7.23 1.86C12.59 12.5 15.24 12 17 8z"/></svg>
-      </div>
-      <h3>Green Cleaning (Eco-Friendly)</h3>
-      <p>Environmentally responsible cleaning using non-toxic, biodegradable products safe for people, pets, and the planet.</p>
-      <ul class="service-list">
-        <li>Non-toxic certified products</li>
-        <li>Safe for children &amp; pets</li>
-        <li>Reduced environmental impact</li>
-      </ul>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">
-        <svg viewBox="0 0 24 24"><path d="M19.5 12c0-1.23-.37-2.36-.99-3.32L12 15.19 5.49 8.68C4.86 9.64 4.5 10.77 4.5 12c0 4.14 3.36 7.5 7.5 7.5s7.5-3.36 7.5-7.5zm-7.5 9C6.48 21 2 16.52 2 11c0-2.76 1.12-5.26 2.93-7.07L12 11l7.07-7.07C20.88 5.74 22 8.24 22 11c0 5.52-4.48 10-10 10z"/></svg>
-      </div>
-      <h3>Post-Construction Cleaning</h3>
-      <p>Detailed cleanup after renovations or new builds — removing dust, debris, and residue so your space is move-in ready.</p>
-      <ul class="service-list">
-        <li>Dust &amp; debris removal</li>
-        <li>Window &amp; surface detail</li>
-        <li>Final inspection-ready clean</li>
-      </ul>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">
-        <svg viewBox="0 0 24 24"><path d="M17 16l-4-4V8.82C14.16 8.4 15 7.3 15 6c0-1.66-1.34-3-3-3S9 4.34 9 6c0 1.3.84 2.4 2 2.82V12l-4 4H3v2h4.05L11 11.05 14.95 18H19v-2h-2z"/></svg>
-      </div>
-      <h3>Pressure Washing Services</h3>
-      <p>High-powered exterior cleaning for driveways, walkways, parking lots, building exteriors, and more.</p>
-      <ul class="service-list">
-        <li>Concrete &amp; pavement cleaning</li>
-        <li>Building facade washing</li>
-        <li>Grease &amp; stain removal</li>
-      </ul>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">
-        <svg viewBox="0 0 24 24"><path d="M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H3V5h18v14zM5 15h14v2H5zm0-4h14v2H5zm0-4h14v2H5z"/></svg>
-      </div>
-      <h3>Window Cleaning</h3>
-      <p>Streak-free window cleaning for residential and commercial properties — interior, exterior, and hard-to-reach panes.</p>
-      <ul class="service-list">
-        <li>Interior &amp; exterior glass</li>
-        <li>Screens &amp; tracks included</li>
-        <li>Commercial high-reach available</li>
-      </ul>
+    <div class="why">
+      <div><div class="line"></div><h3>Locally owned</h3><p>You deal with the owners, not a call center. Problems get fixed fast.</p></div>
+      <div><div class="line"></div><h3>Reliable crews</h3><p>Consistent staff and schedules so your space is ready when your team and customers arrive.</p></div>
+      <div><div class="line"></div><h3>Attention to detail</h3><p>Checklists for every visit and follow-ups so nothing gets missed.</p></div>
+      <div><div class="line"></div><h3>Clear pricing</h3><p>Walkthrough and a written, competitive quote. No surprises on the invoice.</p></div>
     </div>
   </div>
 </section>
 
-<!-- WHY US -->
-<section class="why" id="why">
-  <div class="section-label">Why Choose Us</div>
-  <h2>The Cruz Difference</h2>
-  <p class="section-desc">We're not just a cleaning company — we're your neighbors. Here's what sets us apart.</p>
-
-  <div class="why-grid fade-in">
-    <div class="why-item">
-      <div class="why-num">01</div>
-      <div class="why-text">
-        <h4>Locally Owned &amp; Operated</h4>
-        <p>We're a family business rooted in this community. When you hire Cruz, you're investing in local — and we take that seriously.</p>
-      </div>
+<section id="areas" class="area">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Service area</p>
+      <h2>Based in Murfreesboro, serving Middle Tennessee</h2>
+      <p>We clean commercial spaces across Rutherford and Davidson counties.</p>
     </div>
-    <div class="why-item">
-      <div class="why-num">02</div>
-      <div class="why-text">
-        <h4>Attention to Detail</h4>
-        <p>We don't cut corners. Every job is done thoroughly and with pride, because your space reflects on us too.</p>
-      </div>
-    </div>
-    <div class="why-item">
-      <div class="why-num">03</div>
-      <div class="why-text">
-        <h4>Flexible Scheduling</h4>
-        <p>We work around your schedule — evenings, weekends, recurring visits. Cleaning should never disrupt your day.</p>
-      </div>
-    </div>
-    <div class="why-item">
-      <div class="why-num">04</div>
-      <div class="why-text">
-        <h4>Trusted &amp; Reliable</h4>
-        <p>We show up when we say we will. Our clients trust us with their keys, their homes, and their businesses — and we honor that trust.</p>
-      </div>
-    </div>
+    <div class="chips"><span>Murfreesboro</span><span>Smyrna</span><span>Nashville</span><span>La Vergne</span><span>Antioch</span><span>Rutherford County</span></div>
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section class="testimonials" id="testimonials">
-  <div class="section-label">What People Say</div>
-  <h2>Client Reviews</h2>
-  <p class="section-desc">Don't just take our word for it — hear from the clients who trust us with their spaces.</p>
-
-  <div class="testimonials-grid fade-in">
-    <div class="testimonial-card">
-      <div class="stars">
-        <svg class="star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-        <svg class="star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-        <svg class="star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-        <svg class="star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-        <svg class="star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-      </div>
-      <p class="testimonial-text">"Cruz did an incredible job on our office. The team was professional, thorough, and left everything spotless. We've already scheduled them for weekly service."</p>
-      <div class="testimonial-author">
-        <div class="author-avatar">MR</div>
-        <div>
-          <div class="author-name">Maria R.</div>
-          <div class="author-type">Office Manager</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="testimonial-card">
-      <div class="stars">
-        <svg class="star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-        <svg class="star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-        <svg class="star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-        <svg class="star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-        <svg class="star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-      </div>
-      <p class="testimonial-text">"Had them do a deep clean before we moved in. Absolutely amazing — every corner was perfect. Jose is honest, hardworking, and very reasonably priced."</p>
-      <div class="testimonial-author">
-        <div class="author-avatar">DL</div>
-        <div>
-          <div class="author-name">David L.</div>
-          <div class="author-type">Homeowner</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="testimonial-placeholder">
-      <svg style="width:28px;height:28px;fill:rgba(255,255,255,0.3);" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-      <p>Your review could be here.<br>We'd love to earn it.</p>
-    </div>
+<section id="faq" class="faq">
+  <div class="wrap">
+    <div class="head"><p class="eyebrow">FAQ</p><h2>Quick answers</h2></div>
+    <details><summary>What areas do you serve?</summary><p>Murfreesboro, Smyrna and Nashville, plus nearby communities in Rutherford and Davidson counties.</p></details>
+    <details><summary>Are you insured?</summary><p>Yes. We carry liability insurance and can provide a certificate of insurance on request.</p></details>
+    <details><summary>How do you price commercial cleaning?</summary><p>Pricing depends on square footage, visit frequency and scope. We walk your space and send a clear, competitive written quote.</p></details>
+    <details><summary>Do you offer one-time deep cleans?</summary><p>Yes. Many clients start with a deep clean and then move to a recurring schedule.</p></details>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section class="contact" id="contact">
-  <div class="section-label">Get In Touch</div>
-  <h2>Request a Free Quote</h2>
-  <p class="section-desc">Ready to get started? Reach out and we'll get back to you quickly with a custom quote.</p>
-
-  <div class="contact-inner fade-in">
-    <div class="contact-info">
-      <h3>Contact Info</h3>
-      <div class="contact-detail">
-        <div class="contact-detail-icon">
-          <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
-        </div>
-        <div>
-          <div class="contact-detail-label">Phone</div>
-          <div class="contact-detail-value"><a href="tel:6159958284">(615) 995-8284</a></div>
-        </div>
-      </div>
-      <div class="contact-detail">
-        <div class="contact-detail-icon">
-          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-        </div>
-        <div>
-          <div class="contact-detail-label">Email</div>
-          <div class="contact-detail-value"><a href="/cdn-cgi/l/email-protection#791a0b0c031c170f100b1617141c170d1815391e14181015571a1614"><span class="__cf_email__" data-cfemail="3f5c4d4a455a5149564d5051525a514b5e537f58525e5653115c5052">[email&#160;protected]</span></a></div>
-        </div>
-      </div>
-      <div class="contact-detail">
-        <div class="contact-detail-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-        </div>
-        <div>
-          <div class="contact-detail-label">Service Area</div>
-          <div class="contact-detail-value">Nashville, TN &amp; Surrounding Areas</div>
-        </div>
-      </div>
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="info">
+      <p class="eyebrow">Get a quote</p>
+      <h2>Tell us about your space.</h2>
+      <p>We reply within one business day. Prefer to talk? Call or text anytime.</p>
+      <a href="tel:+16159958284">(615) 995-8284</a>
+      <a href="mailto:cruzenvironmental@gmail.com">cruzenvironmental@gmail.com</a>
     </div>
-
-    <div class="contact-form">
-      <h3>Send Us a Message</h3>
-      <div class="form-row">
-        <div class="form-group">
-          <label for="fname">First Name</label>
-          <input type="text" id="fname" placeholder="Jose">
-        </div>
-        <div class="form-group">
-          <label for="lname">Last Name</label>
-          <input type="text" id="lname" placeholder="Cruz">
-        </div>
+    <form action="https://formsubmit.co/cruzenvironmental@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="New quote request from website">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off">
+      <div class="row">
+        <label>First name<input name="first_name" required autocomplete="given-name"></label>
+        <label>Last name<input name="last_name" required autocomplete="family-name"></label>
       </div>
-      <div class="form-group">
-        <label for="email">Email Address</label>
-        <input type="email" id="email" placeholder="you@email.com">
+      <div class="row">
+        <label>Email<input type="email" name="email" required autocomplete="email"></label>
+        <label>Phone<input type="tel" name="phone" autocomplete="tel"></label>
       </div>
-      <div class="form-group">
-        <label for="service">Service Needed</label>
-        <select id="service">
-          <option value="">Select a service...</option>
-          <optgroup label="Residential &amp; Short-Term Rentals">
-            <option>Residential Cleaning</option>
-            <option>Airbnb &amp; STR Cleaning</option>
-            <option>Apartment Turnover Cleaning</option>
-            <option>Deep Cleaning Services</option>
-          </optgroup>
-          <optgroup label="Commercial &amp; Specialty Facilities">
-            <option>Office Cleaning</option>
-            <option>Retail Store Cleaning</option>
-            <option>Restaurant Cleaning</option>
-            <option>Hotel &amp; Hospitality Cleaning</option>
-            <option>Gym &amp; Fitness Center Cleaning</option>
-            <option>Daycare Cleaning</option>
-            <option>Event Venue Cleaning</option>
-            <option>Warehouse &amp; Industrial Cleaning</option>
-          </optgroup>
-          <optgroup label="Specialized &amp; Environmental">
-            <option>Floor Care &amp; Stripping</option>
-            <option>Carpet Cleaning</option>
-            <option>Disinfection &amp; Sanitization</option>
-            <option>Green Cleaning (Eco-Friendly)</option>
-            <option>Post-Construction Cleaning</option>
-            <option>Pressure Washing</option>
-            <option>Window Cleaning</option>
-          </optgroup>
-          <option>Not sure — need advice</option>
+      <label>Service needed
+        <select name="service">
+          <option>Commercial Janitorial</option>
+          <option>Gym &amp; Fitness Center</option>
+          <option>Deep Cleaning</option>
+          <option>Floor Care &amp; Stripping</option>
+          <option>Disinfection &amp; Sanitizing</option>
+          <option>Post-Construction</option>
+          <option>Carpet Cleaning</option>
+          <option>Window / Pressure Washing</option>
+          <option>Residential / Turnover</option>
+          <option>Not sure, need advice</option>
         </select>
-      </div>
-      <div class="form-group">
-        <label for="message">Tell Us About Your Space</label>
-        <textarea id="message" placeholder="Size of space, frequency needed, any special requirements..."></textarea>
-      </div>
-      <button class="btn-submit" onclick="handleSubmit()">Send Message &rarr;</button>
-    </div>
+      </label>
+      <label>About your space<textarea name="message" placeholder="Type of business, approx. square footage, how often"></textarea></label>
+      <button class="btn" type="submit">Request My Quote</button>
+    </form>
   </div>
 </section>
 
-<!-- FOOTER -->
+</main>
+
 <footer>
-  <div class="footer-logo">
-    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="50" cy="50" r="44" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="9"/>
-      <circle cx="50" cy="50" r="30" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="7"/>
-      <path d="M68 35 A22 22 0 1 0 68 65" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="7" stroke-linecap="round"/>
-      <line x1="50" y1="4" x2="50" y2="19" stroke="#1e1e1e" stroke-width="10"/>
-      <line x1="50" y1="81" x2="50" y2="96" stroke="#1e1e1e" stroke-width="10"/>
-      <line x1="78" y1="65" x2="86" y2="77" stroke="#1e1e1e" stroke-width="10"/>
-    </svg>
-    <div>
-      <div class="footer-brand-name">CRUZ</div>
-      <div class="footer-brand-sub">Janitorial &amp; Environmental Services</div>
-    </div>
+  <div class="wrap">
+    <span class="mark">CRUZ</span>
+    <span>Environmental &amp; Property Services · Murfreesboro, TN</span>
+    <span>© 2026 Cruz Janitorial &amp; Environmental Services, LLC</span>
   </div>
-  <div class="footer-copy">&copy; 2026 Cruz Janitorial &amp; Environmental Services. All rights reserved.</div>
 </footer>
 
-<script>
-  // Only apply fade animations if IntersectionObserver works properly
-  if ('IntersectionObserver' in window) {
-    const els = document.querySelectorAll('.fade-in');
-    els.forEach(el => el.classList.add('animate-ready'));
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-          observer.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.05, rootMargin: '0px 0px -40px 0px' });
-    els.forEach(el => observer.observe(el));
-  }
 
-  function handleSubmit() {
-    const fname = document.getElementById('fname').value;
-    const email = document.getElementById('email').value;
-    const service = document.getElementById('service').value;
-    if (!fname || !email || !service) {
-      alert('Please fill in your name, email, and service type.');
-      return;
-    }
-    alert('Thank you! We\'ll be in touch soon to discuss your cleaning needs.');
-  }
+<script>
+/* ===== PHOTOS & PROOF =====
+   1. Drop images into assets/photos/ (JPG, ~1600px wide, under 400 KB each; compress at squoosh.app).
+   2. Add a line to PHOTOS below. Photos appear in the grid under the video.
+   Get written permission before naming a client (e.g. a gym) or showing identifiable people. */
+var PHOTOS = [
+  {video:"assets/photos/equipment-clean.mp4", src:"assets/photos/equipment-clean-poster.jpg", alt:"Cruz crew member sanitizing cardio equipment in a fitness center", caption:"Equipment sanitizing, fitness center"},
+  {src:"assets/photos/locker-corridor.jpg", alt:"Clean wood locker room with a bench and polished floor", caption:"Locker rooms, reset and spotless"},
+  {src:"assets/photos/crew-cruz-jacket.jpg", alt:"Cruz crew member in a CRUZ jacket using a backpack vacuum", caption:"Backpack vacuum crew at work"},
+  {src:"assets/photos/strength-aisle.jpg", alt:"Clean strength training floor with plate-loaded machines and rubber flooring", caption:"Strength floor, deep vacuumed"},
+  {src:"assets/photos/sauna.jpg", alt:"Clean wood sauna benches and tile floor", caption:"Saunas and steam rooms, detailed"},
+  {video:"assets/photos/crew-vacuum.mp4", src:"assets/photos/crew-vacuum-poster.jpg", alt:"Two Cruz crew members vacuuming a turf training area with backpack vacuums", caption:"Turf and training areas, vacuumed fast"},
+  {src:"assets/photos/rowers-floor.jpg", alt:"Row of rowing machines on clean carpet in a fitness center", caption:"Cardio floors, ready for members"},
+  {src:"assets/photos/checker-hall.jpg", alt:"Clean curved hallway with patterned wall and wood-look flooring", caption:"Common areas that make an impression"},
+  {src:"assets/photos/turf-rig.jpg", alt:"Clean functional training area with rig, rower and turf", caption:"Functional training zones"},
+  {src:"assets/photos/vanity-wide.jpg", alt:"Clean locker room vanity with sinks, mirrors and hair dryers", caption:"Vanities and mirrors, streak-free"},
+  {src:"assets/photos/shower-bench.jpg", alt:"Clean tiled shower with hex tile floor", caption:"Showers and tile, scrubbed"},
+  {src:"assets/photos/restroom-stalls.jpg", alt:"Clean commercial restroom with marble tile and black stalls", caption:"Restroom detail clean"},
+  // {src:"assets/photos/your-photo.jpg", alt:"Describe the photo", caption:"Short caption"},
+];
+/* Only add REAL reviews from real customers, with their OK. */
+var REVIEWS = [
+  // {text:"They show up on time and the building has never looked better.", name:"Name, Business, City"},
+];
+(function(){
+  var work=document.getElementById('work'),shots=document.getElementById('shots'),q=document.getElementById('quotes'),shown=0;
+  function reveal(){}
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){var v=document.querySelector('.reel video');if(v){v.removeAttribute('autoplay');v.pause();v.controls=true;}}
+  PHOTOS.forEach(function(p){
+    var f=document.createElement('figure'),i=new Image();f.hidden=true;shots.appendChild(f);
+    i.alt=p.alt||''; i.decoding='async';
+    i.onload=function(){
+      var m=i;
+      if(p.video){
+        m=document.createElement('video');
+        m.muted=true;m.loop=true;m.playsInline=true;m.autoplay=true;m.preload='metadata';m.poster=p.src;
+        m.setAttribute('aria-label',p.alt||'');m.src=p.video;
+        if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){m.autoplay=false;m.controls=true;}
+      }
+      f.appendChild(m);
+      if(p.caption){var c=document.createElement('figcaption');c.textContent=p.caption;f.appendChild(c);}
+      f.hidden=false; shown++;
+    };
+    i.onerror=function(){f.remove();};
+    i.src=p.src;
+  });
+  REVIEWS.forEach(function(r){
+    var d=document.createElement('blockquote');d.className='quote';
+    var p=document.createElement('p');p.textContent='\u201C'+r.text+'\u201D';
+    var c=document.createElement('cite');c.textContent=r.name;
+    d.appendChild(p);d.appendChild(c);q.appendChild(d);shown++;
+  });
+  reveal();
+})();
 </script>
+</body>
+</html>
