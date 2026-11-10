@@ -64,21 +64,22 @@
 <div class="wrap">
   <header>
     <div class="brand">CRUZ<small>CREW CHECK-IN</small></div>
-    <div class="pill" id="sitePill">Avalon Gym</div>
+    <div style="display:flex;gap:8px;align-items:center"><button class="pill" id="langBtn" onclick="toggleLang()" style="background:transparent;color:var(--silver);cursor:pointer;font-family:inherit;font-weight:700">ES</button><div class="pill" id="sitePill">Avalon Gym</div></div>
   </header>
 
   <!-- STEP 1: who -->
   <section id="vWho" class="card">
-    <h1>Who's checking in?</h1>
-    <p>Pick your name. Your phone will remember it next time.</p>
+    <h1 data-i="who">Who's checking in?</h1>
+    <p data-i="whoSub">Pick your name. Your phone will remember it next time.</p>
     <div class="grid" id="names"></div>
+    <div style="margin-top:12px"><input id="guestName" data-i-ph="guestPh" placeholder="Helper / guest: type your name" style="width:100%;border-radius:12px;border:1px solid #1B2740;background:#0E1628;color:#fff;padding:14px;font-size:16px;font-family:inherit"><button class="btn ghost" style="margin-top:8px" onclick="pickGuest()" data-i="guestBtn">Continue as guest</button></div>
   </section>
 
   <!-- STEP 2: station -->
   <section id="vStation" class="card hidden">
-    <div class="row"><div class="who">Hey, <b id="whoName"></b></div><button class="btn ghost" style="width:auto;padding:8px 12px;font-size:13px" onclick="changeName()">Not you?</button></div>
-    <h1>Pick your station</h1>
-    <p>Grab one nobody has taken yet today.</p>
+    <div class="row"><div class="who"><span data-i="hey">Hey,</span> <b id="whoName"></b></div><button class="btn ghost" style="width:auto;padding:8px 12px;font-size:13px" onclick="changeName()" data-i="notYou">Not you?</button></div>
+    <h1 data-i="pick">Pick your station</h1>
+    <p data-i="pickSub">Grab one nobody has taken yet today.</p>
     <div class="grid" id="stations"></div>
     <div class="msg" id="stMsg"></div>
   </section>
@@ -86,10 +87,10 @@
   <!-- STEP 3: clock in -->
   <section id="vClockIn" class="card hidden">
     <div class="row"><div class="who"><b id="ciName"></b></div><span class="station-tag" id="ciStation"></span></div>
-    <h1>Ready to start?</h1>
-    <p>Tap below the moment you begin. Your checklist opens right after.</p>
-    <button class="btn go" onclick="clockIn()">CLOCK IN</button>
-    <button class="btn ghost" style="margin-top:10px" onclick="show('vStation')">Change station</button>
+    <h1 data-i="ready">Ready to start?</h1>
+    <p data-i="readySub">Tap below the moment you begin. Your checklist opens right after.</p>
+    <button class="btn go" onclick="clockIn()" data-i="clockIn">CLOCK IN</button>
+    <button class="btn ghost" style="margin-top:10px" onclick="show('vStation')" data-i="changeSt">Change station</button>
     <div class="msg" id="ciMsg"></div>
   </section>
 
@@ -98,15 +99,15 @@
     <div class="card">
       <div class="row"><div class="who"><b id="lName"></b></div><span class="station-tag" id="lStation"></span></div>
       <div class="timer" id="timer">00:00</div>
-      <div class="timer-label">on the clock since <span id="since"></span></div>
+      <div class="timer-label"><span data-i="since">on the clock since</span> <span id="since"></span></div>
       <div class="progress"><i id="bar"></i></div>
       <div id="tasks"></div>
     </div>
     <div class="card">
-      <h2>Notes (optional)</h2>
-      <textarea id="notes" placeholder="Out of paper towels, broken dispenser, anything the next person should know…"></textarea>
+      <h2 data-i="notes">Notes (optional)</h2>
+      <textarea id="notes" data-i-ph="notesPh" placeholder="Out of paper towels, broken dispenser, anything the next person should know…"></textarea>
     </div>
-    <button class="btn done" id="btnDone" onclick="complete()" disabled>COMPLETE</button>
+    <button class="btn done" id="btnDone" onclick="complete()" disabled data-i="complete">COMPLETE</button>
     <div class="msg" id="lMsg">Check everything off to finish.</div>
   </section>
 
@@ -114,11 +115,11 @@
   <section id="vDone" class="card hidden">
     <div class="big-ok">
       <div class="ck"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#06210F" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-      <h1>Logged. Nice work.</h1>
+      <h1 data-i="logged">Logged. Nice work.</h1>
       <p id="doneText"></p>
     </div>
-    <div class="stat"><div><b id="dMin">0</b><span>minutes</span></div><div><b id="dItems">0</b><span>items done</span></div></div>
-    <button class="btn ghost" onclick="reset()">Start another check-in</button>
+    <div class="stat"><div><b id="dMin">0</b><span data-i="minutes">minutes</span></div><div><b id="dItems">0</b><span data-i="itemsDone">items done</span></div></div>
+    <button class="btn ghost" onclick="reset()" data-i="another">Start another check-in</button>
   </section>
 
   <footer>CRUZ Environmental &amp; Property Services · internal use</footer>
@@ -130,38 +131,74 @@ var SCRIPT_URL = "https://script.google.com/macros/s/AKfycbySBBw8ejJGJFkom-NOgFT
 var SITE = "Avalon Gym";
 var CREW = ["Jose", "Emanuel", "Lupita", "Chuy", "Jorge"];
 var STATIONS = [
-  { id: "S1", name: "Locker Rooms & Wet Areas", tasks: [
-    ["Empty bathroom trash", "Restrooms"],
-    ["Pick up floor and locker trash", "Locker rooms"],
-    ["Wipe down toilets", "Restrooms"],
-    ["Wipe down sinks", "Restrooms"],
-    ["Wipe down mirrors", "Restrooms"],
-    ["Pick up trash and wipe down", "Sauna"],
-    ["Shower clean-up", "Showers"],
-    ["Mop all tile and laminate floors", "Locker rooms"]
+  { id: "S1", name: { en: "Locker Rooms & Wet Areas", es: "Vestidores y Áreas Húmedas" }, tasks: [
+    { en: "Empty bathroom trash", es: "Vaciar la basura de los baños", area: { en: "Restrooms", es: "Baños" } },
+    { en: "Pick up floor and locker trash", es: "Recoger basura del piso y los casilleros", area: { en: "Locker rooms", es: "Vestidores" } },
+    { en: "Wipe down toilets", es: "Limpiar los inodoros", area: { en: "Restrooms", es: "Baños" } },
+    { en: "Wipe down sinks", es: "Limpiar los lavamanos", area: { en: "Restrooms", es: "Baños" } },
+    { en: "Wipe down mirrors", es: "Limpiar los espejos", area: { en: "Restrooms", es: "Baños" } },
+    { en: "Pick up trash and wipe down", es: "Recoger basura y limpiar", area: { en: "Sauna", es: "Sauna" } },
+    { en: "Shower clean-up", es: "Limpiar las regaderas", area: { en: "Showers", es: "Regaderas" } },
+    { en: "Mop all tile and laminate floors", es: "Trapear todo el piso de azulejo y laminado", area: { en: "Locker rooms", es: "Vestidores" } }
   ]},
-  { id: "S2", name: "Front & Studios", tasks: [
-    ["Trash and floor pick-up", "Front offices"],
-    ["Trash and floor pick-up", "Front lobby"],
-    ["Trash and floor pick-up", "Basketball gym"],
-    ["Trash and floor pick-up", "Dance studio"],
-    ["Trash and floor pick-up", "Bike studio"],
-    ["Trash and floor pick-up", "Cardio area"],
-    ["Wipe down front desk", "Front lobby"],
-    ["Vacuum", "Front & studios"]
+  { id: "S2", name: { en: "Front & Studios", es: "Entrada y Estudios" }, tasks: [
+    { en: "Trash and floor pick-up", es: "Basura y recoger el piso", area: { en: "Front offices", es: "Oficinas de enfrente" } },
+    { en: "Trash and floor pick-up", es: "Basura y recoger el piso", area: { en: "Front lobby", es: "Recepción" } },
+    { en: "Trash and floor pick-up", es: "Basura y recoger el piso", area: { en: "Basketball gym", es: "Cancha de básquetbol" } },
+    { en: "Trash and floor pick-up", es: "Basura y recoger el piso", area: { en: "Dance studio", es: "Estudio de baile" } },
+    { en: "Trash and floor pick-up", es: "Basura y recoger el piso", area: { en: "Bike studio", es: "Estudio de bicicletas" } },
+    { en: "Trash and floor pick-up", es: "Basura y recoger el piso", area: { en: "Cardio area", es: "Área de cardio" } },
+    { en: "Wipe down front desk", es: "Limpiar el mostrador de recepción", area: { en: "Front lobby", es: "Recepción" } },
+    { en: "Vacuum", es: "Aspirar", area: { en: "Front & studios", es: "Entrada y estudios" } }
   ]},
-  { id: "S3", name: "Weights & Upstairs", tasks: [
-    ["Change trash cans, floor pick-up", "Weight area"],
-    ["Change trash cans, floor pick-up", "Cardio space 2"],
-    ["Change trash cans, floor pick-up", "CrossFit section"],
-    ["Change trash cans, floor pick-up", "Upstairs"],
-    ["Vacuum", "Weights & upstairs"]
+  { id: "S3", name: { en: "Weights & Upstairs", es: "Pesas y Planta Alta" }, tasks: [
+    { en: "Change trash cans, floor pick-up", es: "Cambiar botes de basura, recoger el piso", area: { en: "Weight area", es: "Área de pesas" } },
+    { en: "Change trash cans, floor pick-up", es: "Cambiar botes de basura, recoger el piso", area: { en: "Cardio space 2", es: "Cardio 2" } },
+    { en: "Change trash cans, floor pick-up", es: "Cambiar botes de basura, recoger el piso", area: { en: "CrossFit section", es: "Sección de CrossFit" } },
+    { en: "Change trash cans, floor pick-up", es: "Cambiar botes de basura, recoger el piso", area: { en: "Upstairs", es: "Planta alta" } },
+    { en: "Vacuum", es: "Aspirar", area: { en: "Weights & upstairs", es: "Pesas y planta alta" } }
   ]}
 ];
+var T = {
+  en: { who: "Who's checking in?", whoSub: "Pick your name. Your phone will remember it next time.", hey: "Hey,", notYou: "Not you?",
+        pick: "Pick your station", pickSub: "Grab one nobody has taken yet today.", ready: "Ready to start?",
+        readySub: "Tap below the moment you begin. Your checklist opens right after.", clockIn: "CLOCK IN", changeSt: "Change station",
+        since: "on the clock since", notes: "Notes (optional)", notesPh: "Out of paper towels, broken dispenser, anything the next person should know…",
+        complete: "COMPLETE", logged: "Logged. Nice work.", minutes: "minutes", itemsDone: "items done", another: "Start another check-in",
+        guestPh: "Helper / guest: type your name", guestBtn: "Continue as guest", items: "items", takenBy: "Taken by", already: "You already started this today",
+        checking: "Checking who's here today…", noSheet: "Couldn't reach the sheet. Pick your station anyway.", logging: "Logging…",
+        savedLocal: "Saved on this phone, will sync when you complete.", allDone: "All done. Tap Complete to clock out.",
+        left1: "item left.", leftN: "items left.", failDone: "Couldn't reach the sheet. Check signal and tap Complete again." },
+  es: { who: "¿Quién va a registrarse?", whoSub: "Elige tu nombre. Tu teléfono lo recordará la próxima vez.", hey: "Hola,", notYou: "¿No eres tú?",
+        pick: "Elige tu estación", pickSub: "Toma una que nadie haya tomado hoy.", ready: "¿Listo para empezar?",
+        readySub: "Toca abajo en el momento que empieces. Tu lista se abre enseguida.", clockIn: "MARCAR ENTRADA", changeSt: "Cambiar estación",
+        since: "trabajando desde las", notes: "Notas (opcional)", notesPh: "Se acabaron las toallas, dispensador roto, cualquier cosa que deba saber el siguiente…",
+        complete: "TERMINAR", logged: "Registrado. Buen trabajo.", minutes: "minutos", itemsDone: "tareas hechas", another: "Registrar otra entrada",
+        guestPh: "Ayudante / invitado: escribe tu nombre", guestBtn: "Continuar como invitado", items: "tareas", takenBy: "Tomada por", already: "Ya empezaste esta hoy",
+        checking: "Revisando quién está hoy…", noSheet: "No se pudo conectar con la hoja. Elige tu estación de todos modos.", logging: "Registrando…",
+        savedLocal: "Guardado en este teléfono, se enviará al terminar.", allDone: "Todo listo. Toca Terminar para marcar salida.",
+        left1: "tarea pendiente.", leftN: "tareas pendientes.", failDone: "No se pudo conectar con la hoja. Revisa la señal y toca Terminar otra vez." }
+};
+var LANG = localStorage.getItem("cruz_lang") || "en";
+function t(k) { return T[LANG][k]; }
+function L(obj) { return obj[LANG] || obj.en; }
+function applyLang() {
+  document.documentElement.lang = LANG;
+  $("langBtn").textContent = LANG === "en" ? "ES" : "EN";
+  document.querySelectorAll("[data-i]").forEach(function (el) { el.textContent = t(el.getAttribute("data-i")); });
+  document.querySelectorAll("[data-i-ph]").forEach(function (el) { el.placeholder = t(el.getAttribute("data-i-ph")); });
+}
+function toggleLang() {
+  LANG = LANG === "en" ? "es" : "en"; localStorage.setItem("cruz_lang", LANG); applyLang();
+  if (!$("vStation").classList.contains("hidden")) renderStations({ __loaded: true });
+  if (!$("vClockIn").classList.contains("hidden")) $("ciStation").textContent = L(station(state.station).name);
+  if (!$("vList").classList.contains("hidden")) openList();
+}
 /* ========================== */
 
-var state = JSON.parse(localStorage.getItem("cruz_state") || "{}");
 var $ = function (id) { return document.getElementById(id); };
+var state = JSON.parse(localStorage.getItem("cruz_state") || "{}");
+
 function save() { localStorage.setItem("cruz_state", JSON.stringify(state)); }
 function show(id) {
   ["vWho", "vStation", "vClockIn", "vList", "vDone"].forEach(function (v) { $(v).classList.toggle("hidden", v !== id); });
@@ -186,6 +223,7 @@ function renderNames() {
   $("names").innerHTML = CREW.map(function (n) { return '<button class="btn" onclick="pickName(\'' + n + '\')">' + n + '</button>'; }).join("");
 }
 function pickName(n) { state.name = n; save(); renderStations(); show("vStation"); }
+function pickGuest() { var n = $("guestName").value.trim(); if (!n) { $("guestName").focus(); return; } pickName(n + " (guest)"); }
 function changeName() { delete state.name; save(); show("vWho"); }
 
 /* --- step 2 --- */
@@ -196,35 +234,35 @@ function renderStations(taken) {
     var by = taken[s.id];
     var mine = by === state.name;
     var dis = by && !mine ? " disabled" : "";
-    var sub = by ? (mine ? "You already started this today" : "Taken by " + by) : s.tasks.length + " items";
-    return '<button class="btn' + (by ? "" : " primary") + '"' + dis + ' onclick="pickStation(\'' + s.id + '\')">' + s.name + '<span class="sub">' + sub + '</span></button>';
+    var sub = by ? (mine ? t("already") : t("takenBy") + " " + by) : s.tasks.length + " " + t("items");
+    return '<button class="btn' + (by ? "" : " primary") + '"' + dis + ' onclick="pickStation(\'' + s.id + '\')">' + L(s.name) + '<span class="sub">' + sub + '</span></button>';
   }).join("");
   if (!taken.__loaded) {
-    $("stMsg").textContent = "Checking who's here today…";
+    $("stMsg").textContent = t("checking");
     getToday().then(function (r) { r.__loaded = true; renderStations(r); $("stMsg").textContent = ""; })
-      .catch(function () { $("stMsg").textContent = "Couldn't reach the sheet. Pick your station anyway."; });
+      .catch(function () { $("stMsg").textContent = t("noSheet"); });
   }
 }
-function pickStation(id) { state.station = id; save(); $("ciName").textContent = state.name; $("ciStation").textContent = station(id).name; show("vClockIn"); }
+function pickStation(id) { state.station = id; save(); $("ciName").textContent = state.name; $("ciStation").textContent = L(station(id).name); show("vClockIn"); }
 
 /* --- step 3 --- */
 function clockIn() {
-  var btn = document.querySelector("#vClockIn .go"); btn.disabled = true; $("ciMsg").textContent = "Logging…";
+  var btn = document.querySelector("#vClockIn .go"); btn.disabled = true; $("ciMsg").textContent = t("logging");
   state.visit = { id: uid(), start: Date.now(), done: [], station: state.station, name: state.name };
   save();
-  post({ action: "clockin", visitId: state.visit.id, name: state.name, station: state.station, stationName: station(state.station).name, startedAt: new Date(state.visit.start).toISOString() })
+  post({ action: "clockin", visitId: state.visit.id, name: state.name, station: state.station, stationName: station(state.station).name.en, startedAt: new Date(state.visit.start).toISOString() })
     .then(function () { btn.disabled = false; $("ciMsg").textContent = ""; openList(); })
-    .catch(function () { btn.disabled = false; $("ciMsg").textContent = "Saved on this phone, will sync when you complete."; state.visit.pendingIn = true; save(); openList(); });
+    .catch(function () { btn.disabled = false; $("ciMsg").textContent = t("savedLocal"); state.visit.pendingIn = true; save(); openList(); });
 }
 
 /* --- step 4 --- */
 var tick;
 function openList() {
   var v = state.visit, s = station(v.station);
-  $("lName").textContent = v.name; $("lStation").textContent = s.name;
+  $("lName").textContent = v.name; $("lStation").textContent = L(s.name);
   $("since").textContent = clock(new Date(v.start));
-  $("tasks").innerHTML = s.tasks.map(function (t, i) {
-    return '<div class="task' + (v.done.indexOf(i) > -1 ? " on" : "") + '" onclick="toggle(' + i + ')"><div class="box"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#06210F" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div><div class="t">' + t[0] + '</div><div class="a">' + t[1] + '</div></div></div>';
+  $("tasks").innerHTML = s.tasks.map(function (tk, i) {
+    return '<div class="task' + (v.done.indexOf(i) > -1 ? " on" : "") + '" onclick="toggle(' + i + ')"><div class="box"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#06210F" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div><div class="t">' + L(tk) + '</div><div class="a">' + L(tk.area) + '</div></div></div>';
   }).join("");
   $("notes").value = v.notes || "";
   updateBar(); show("vList");
@@ -239,29 +277,30 @@ function updateBar() {
   var s = station(state.visit.station), n = state.visit.done.length, all = n === s.tasks.length;
   $("bar").style.width = (100 * n / s.tasks.length) + "%";
   $("btnDone").disabled = !all;
-  $("lMsg").textContent = all ? "All done. Tap Complete to clock out." : (s.tasks.length - n) + " item" + (s.tasks.length - n === 1 ? "" : "s") + " left.";
+  $("lMsg").textContent = all ? t("allDone") : (s.tasks.length - n) + " " + (s.tasks.length - n === 1 ? t("left1") : t("leftN"));
   $("lMsg").classList.remove("err");
 }
 function complete() {
   var v = state.visit, s = station(v.station), end = Date.now();
   v.notes = $("notes").value; save();
-  $("btnDone").disabled = true; $("lMsg").textContent = "Logging…";
-  var payload = { action: "complete", visitId: v.id, name: v.name, station: v.station, stationName: s.name,
+  $("btnDone").disabled = true; $("lMsg").textContent = t("logging");
+  var payload = { action: "complete", visitId: v.id, name: v.name, station: v.station, stationName: s.name.en,
     startedAt: new Date(v.start).toISOString(), endedAt: new Date(end).toISOString(),
     minutes: Math.round((end - v.start) / 60000), itemsDone: v.done.length, itemsTotal: s.tasks.length, notes: v.notes || "" };
   post(payload).then(function () {
     clearInterval(tick);
     $("dMin").textContent = payload.minutes; $("dItems").textContent = payload.itemsDone + "/" + payload.itemsTotal;
-    $("doneText").textContent = s.name + " · " + clock(new Date(v.start)) + " – " + clock(new Date(end));
+    $("doneText").textContent = L(s.name) + " · " + clock(new Date(v.start)) + " – " + clock(new Date(end));
     delete state.visit; delete state.station; save(); show("vDone");
   }).catch(function () {
-    $("btnDone").disabled = false; $("lMsg").textContent = "Couldn't reach the sheet. Check signal and tap Complete again."; $("lMsg").classList.add("err");
+    $("btnDone").disabled = false; $("lMsg").textContent = t("failDone"); $("lMsg").classList.add("err");
   });
 }
 function reset() { renderStations(); show("vStation"); }
 
 /* --- boot --- */
 $("sitePill").textContent = SITE;
+applyLang();
 renderNames();
 if (state.visit) openList();
 else if (state.name) { renderStations(); show("vStation"); }
